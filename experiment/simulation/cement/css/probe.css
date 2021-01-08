@@ -1,0 +1,46 @@
+.displaydown {
+  position: absolute;
+  cursor: move;
+  animation-name: display_down;
+  animation-duration: 3s; 
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes display_down {
+  0%   {left: 205px; top: 275px;}
+  100% {left: 205px; top: 375px;}
+}
+
+.probedown {
+  position: absolute;
+  cursor: move;
+  animation-name: probe_down;
+  animation-duration: 3s; 
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes probe_down {
+  0%   {left: 330px; top: 235px;}
+  100% {left: 330px; top: 335px;}
+}
+
+.proberight {
+  position: absolute;
+  cursor: move;
+  animation-name: probe_right;
+  animation-duration: 3s; 
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-iteration-count: 2;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+}
+
+@keyframes  probe_right {
+  0%   {left: 205px; top: 375px;}
+  100% {left: 305px; top: 375px;}
+}
