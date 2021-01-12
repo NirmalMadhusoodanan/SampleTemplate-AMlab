@@ -16,7 +16,7 @@ p7="";
 var i=0;
 var x1=1.5;
 var x2=0.75;
-var t = 20;
+var t = 10;
 var z,sw,v;
 var svg= document.getElementById('specimen');
 var svgNS = "http://www.w3.org/2000/svg";	
@@ -183,11 +183,15 @@ function magic()
 			if(!document.getElementById("lh").value  || !document.getElementById("lh").value!=" " )
 			{
 				
-				alert("Enter the value to proceed ");
+				alert("Enter the value to proceed");
+			}
+			else if(document.getElementById("lh").value<0.1 || document.getElementById("lh").value>0.5)   
+			{
+				alert("Enter the value within range");
 			}
 			else if($("input[name='d']:checked").val()!=0 && $("input[name='d']:checked").val()!=1 )
 			{
-				alert("Select material to proceed ")
+				alert("Select material to proceed")
 			}
 			else
 			{
@@ -231,7 +235,19 @@ function magic()
 		document.getElementById('step-2').setAttribute('class','step2');
 		document.getElementById('specimen').setAttribute('class','svg2');
 		console.log('repeat greater than 1');
-		myStopFunction();
+		myInt = setInterval(animatearrow, 500);
+		console.log(myInt);
+		document.getElementById('arrow1').style="position:absolute; left: 25px; bottom: 130px; height: 40px; z-index: 500;";
+		document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
+		// Code for IE9
+		document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
+		// Standard syntax
+		document.getElementById("arrow1").style.transform = "rotate(180deg)";
+		document.getElementById('step-2').onmouseover =function () 
+		{
+			console.log('onmouseover is running');
+			myStopFunction();
+		};
 		document.getElementById('base').setAttribute('d',"m15 "+(272.5+((a[repeat-1])*2.5)+(0.5/2))+"h420v10h-420v-10")
 		//console.log(document.getElementById('base').getAttribute('d'));
 		document.getElementById('base').style.strokeWidth = 0.5;

@@ -7,7 +7,7 @@ p6="";
 var i=0;
 var x1=1.5;
 var x2=0.75;
-var t = 20;
+var t = 15;
 var z,sw,v,n;
 var svg= document.getElementById('specimen');
 var svgNS = "http://www.w3.org/2000/svg";
