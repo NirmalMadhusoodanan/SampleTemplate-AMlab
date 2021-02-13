@@ -101,7 +101,7 @@
     },
 
     {
-      question: "The combination that will take the least amount of tim to print among the following is ______",
+      question: "The combination that will take the least amount of time to print among the following is ______",
       answers: {
         a: "More layer height,less infill density, more feed rate",
         b: "More layer height,more infill density, more feed rate",
@@ -111,7 +111,7 @@
       correctAnswer: "a"
     },
     {
-      question: "The combination that will take the most amount of tim to print among the following is ______",
+      question: "The combination that will take the most amount of time to print among the following is ______",
       answers: {
         a: "More layer height,less infill density, more feed rate",
         b: "More layer height,more infill density, more feed rate",
