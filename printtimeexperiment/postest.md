@@ -11,13 +11,13 @@ a. Less <br>
 <b>b. More </b><br>
 c. Doesnot affect<br>
 
-Q 3. The combination that will take the least amount of tim to print among the following is ______ <br>
+Q 3. The combination that will take the least amount of time to print among the following is ______ <br>
 <b>a. More layer height,less infill density, more feed rate</b><br>
 b. More layer height,more infill density, more feed rate<br>
 c. Less layer height,more infill density, less feed rate<br>
 d. None of the above<br>
 
-Q 4. The combination that will take the most amount of tim to print among the following is ______ <br>
+Q 4. The combination that will take the most amount of time to print among the following is ______ <br>
 a. More layer height,less infill density, more feed rate<br>
 b. More layer height,more infill density, more feed rate<br>
 <b>c. Less layer height,more infill density, less feed rate</b><br>
