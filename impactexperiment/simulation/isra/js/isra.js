@@ -49,7 +49,7 @@ var questions=["Raster angle is the angle between</br> filament deposition and _
 
 var options2=[["Z-axis","X-axis","Y-axis"],//X-axis
 			  ["90°","45°","60°","30°"],//90°
-			  ["90°","0°","0°/90°","&#177;45°"]];//0°
+			  ["90°","0°","0°/90°","±45°"]];//0°
 
 function validateAnswer(qn,ans,left,top)
 {
