@@ -140,7 +140,7 @@
 3. Note the raster angle value and then click on NEXT Button at the bottom right corner to proceed. <br>
 <img src="images/tsra-4.PNG"><br>
 
-4. Click on the extruder head to start printing. Printing will be completed layer by layer. Notice the amount of material in the infill. After printing is done, click NEXT Button.
+4. Click on the extruder head to start printing. Printing will be completed layer by layer. Notice the raster angle. After printing is done, click NEXT Button.
 <img src="images/tsra-5.PNG"><br>
 <img src="images/tsra-6.PNG"><br>
 
