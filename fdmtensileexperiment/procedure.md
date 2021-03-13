@@ -84,7 +84,7 @@
 <img src="images/tsid-16.PNG"><br>
 <img src="images/tsid-17.PNG"><br>
 
-11. Repeat the same steps in further trials to get values of ultimate tensile strength for different values of infill density. Notice the relation.<br>
+12. Repeat the same steps in further trials to get values of ultimate tensile strength for different values of infill density. Notice the relation.<br>
 <img src="images/tsid-18.PNG"><br>
 
 #### Effect of build orientation on ultimate tensile strength.:
