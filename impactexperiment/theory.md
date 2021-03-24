@@ -21,17 +21,17 @@ Layer Height <br>
 #### 3) Infill density
 <p style="text-indent:50px; text-align: justify">It is the amount of material filled in the product. Usually, fully compact (solid) top and bottom layers and a shell will be printed. The cavity formed like this will be filled with material. The percentage volume of the cavity that is filled is the infill density. Usually for FDM processes infill density is taken as low values in the range 18%-20%, due to importance of time and cost savings over strength.</p>
 <p align="center">
-  <img width="300" src="images/rasterangle.PNG"></img><br><br>
-Raster angle <br>
-( Source: I. J. Solomon, P. Sevvel, and J. Gunasekaran, “A review on the various processing parameters in FDM,” Mater. Today Proc., no. xxxx, pp. 10–15, 2020. )
+  <img width="300" src="images/infillpercentimage.png"></img><br><br>
+Infill Density in percentage <br>
+( Source: https://all3dp.com/2/infill-3d-printing-what-it-means-and-how-to-use-it/ )
 </p>
 
 #### 4) Raster angle
 <p style="text-indent:50px; text-align: justify">It is the angle at which nozzle moves to deposit material with respect to X-axis of the build plate. Usually in FDM, the raster angle is alternated between adjacent layers by 90&deg;. </p>
 <p align="center">
-  <img width="300" src="images/infillpercentimage.png"></img><br><br>
-Infill Density in percentage <br>
-( Source: https://all3dp.com/2/infill-3d-printing-what-it-means-and-how-to-use-it/ )
+  <img width="300" src="images/rasterangle.PNG"></img><br><br>
+Raster angle <br>
+( Source: I. J. Solomon, P. Sevvel, and J. Gunasekaran, “A review on the various processing parameters in FDM,” Mater. Today Proc., no. xxxx, pp. 10–15, 2020. )
 </p>
 
 #### 5) Build Orientation
