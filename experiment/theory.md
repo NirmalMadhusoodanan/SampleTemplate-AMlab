@@ -1,7 +1,7 @@
 ### Fused Deposition Modelling (FDM) process<br>
 <p style="text-indent:50px; text-align: justify">It is a 3D printing process where the material is fed into a heated nozzle from a chamber via rollers. The heated material is extruded onto a base plate, which solidifies on the plate. The nozzle/base plate moves in XY plane to deposit a layer of material. The base plate/nozzle moves in Z direction to aid the deposition of next layer on top of first layer. The whole product is built layer by layer.</p>
 <p align="center">
-  <img width="200" src="images/layer height.png"></img><br><br>
+  <img width="200" src="images/3dprint.PNG"></img><br><br>
 FDM Process Schematic <br>
 ( Source: I. J. Solomon, P. Sevvel, and J. Gunasekaran, “A review on the various processing parameters in FDM,” Mater. Today Proc., no. xxxx, pp. 10–15, 2020.)
 </p>
