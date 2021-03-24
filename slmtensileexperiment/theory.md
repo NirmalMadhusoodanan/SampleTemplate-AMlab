@@ -1,7 +1,7 @@
 ### Selective Laser Melting (SLM) process<br>
 <p style="text-indent:50px; text-align: justify">It is a 3D printing process which uses a high power-density laser to melt and fuse metallic powders together. A controlled amount of powder from the material feeding platform is swept into the building platform by a roller or sweeper tool. This area is levelled by the same spreading mechanism to compact the powder and homogenize the surface (powder bed). Then, a high‐power laser generates a beam that scans a given area, which corresponds to a cross‐sectional surface of the sliced CAD model of the specimen. The laser beam heats the irradiated zone enough to melt the particles of the material and to obtain a solid two‐dimensional part. Then the material platform moves up while the building platform moves down, and a new layer of powder is deposited in the building platform by the spreading mechanism and the process continues.</p>
 <p align="center">
-  <img width="300" src="images/SLMschematic.jpg"></img><br><br>
+  <img width="800" src="images/SLMschematic.jpg"></img><br><br>
 SLM Process Schematic <br>
 ( Source: https://all3dp.com/2/selective-laser-melting-slm-3d-printing-simply-explained/)
 </p>
