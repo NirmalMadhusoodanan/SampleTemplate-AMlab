@@ -26,6 +26,6 @@ d. None of the above<br>
 
 Q 5. The surface roughness value measured in this experiment is ____ <br>
 a. Difference between highest peak and lowest valley.<br>
-<b>b. Average difference between peaks and valleys in measured length.<b><br>
+<b>b. Average difference between peaks and valleys in measured length.</b><br>
 c. Average height of peaks.<br>
 d. Average height of valleys.<br>
