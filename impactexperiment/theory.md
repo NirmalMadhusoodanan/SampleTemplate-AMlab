@@ -13,7 +13,7 @@ FDM Process Schematic <br>
 #### 2) Layer height
 <p style="text-indent:50px; text-align: justify">It is the height of individual layers. For a given component, more layer height means lesser number of layers will be required to build it. Usually it is around the range of 50 &#181m - 500 &#181m. Lesser layer heights are preferred for more adhesion between layers and strength. Layer height shouldn't be more than the nozzle diameter.</p>
 <center>
-<img src="images/layer height.png"></img><br><br>
+<img src="images/layer height.PNG"></img><br><br>
 Layer Height <br>
 ( Source: I. J. Solomon, P. Sevvel, and J. Gunasekaran, “A review on the various processing parameters in FDM,” Mater. Today Proc., no. xxxx, pp. 10–15, 2020. )
 </center>
@@ -21,7 +21,7 @@ Layer Height <br>
 #### 3) Infill density
 <p style="text-indent:50px; text-align: justify">It is the amount of material filled in the product. Usually, fully compact (solid) top and bottom layers and a shell will be printed. The cavity formed like this will be filled with material. The percentage volume of the cavity that is filled is the infill density. Usually for FDM processes infill density is taken as low values in the range 18%-20%, due to importance of time and cost savings over strength.</p>
 <center>
-<img src="images/rasterangle.png"></img><br><br>
+<img src="images/rasterangle.PNG"></img><br><br>
 Raster angle <br>
 ( Source: I. J. Solomon, P. Sevvel, and J. Gunasekaran, “A review on the various processing parameters in FDM,” Mater. Today Proc., no. xxxx, pp. 10–15, 2020. )
 </center>
@@ -37,7 +37,7 @@ Infill Density in percentage <br>
 #### 5) Build Orientation
 <p style="text-indent:50px; text-align: justify">It is the orientation at which the product will be printed on the build plate. Any build orientation other than 0° or 90°, requires the use of support material to hold up the specimen. Usually these supports are made of materials that are dissolvable like Polyvinyl Alcohol (PVA) and High-Impact Polystyrene (HIPS), to ensure easy removal. This will also be printed along with the specimen layer by layer. The build plate will be kept at a lower temperature like 60&deg;C.</p>
 <center>
-<img src="images/buildorientationsurface.png"></img><br><br>
+<img src="images/buildorientationsurface.PNG"></img><br><br>
 Build orientation <br>
 ( Source: T. Yao, Z. Deng, K. Zhang, and S. Li, “A method to predict the ultimate tensile strength of 3D printing polylactic acid (PLA) materials with different printing orientations,” Compos. Part B Eng., vol. 163, no. December 2018, pp. 393–402, 2019. )
 </center>
@@ -50,7 +50,7 @@ Build orientation <br>
 #### 1) Part Geometry
 <p style="text-indent:50px; text-align: justify">Geometry of part is fixed as 80*10*4 mm³ which is a ASTM standard specimen size.</p>
 <center>
-<img src="images/80by10by4geometry.png"></img><br><br>
+<img src="images/80by10by4geometry.PNG"></img><br><br>
 Part Geometry <br>
 </center> 
 
