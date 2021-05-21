@@ -22,7 +22,7 @@ p5="";
 p6="";
 p7="";
 var i=0;
-var t = 7.5;
+var t = 6;
 var z,sw,v;
 var svg= document.getElementById('specimen');
 var svgNS = "http://www.w3.org/2000/svg";
@@ -42,7 +42,7 @@ function navNext()
 }
 var ca;
 var questions=["For build orientations other than 0° <br>and 90°, printing will take more time due to",
-				"Which among these is commonly used <br> support material in FDM?",
+				"Which among these is commonly used support material in FDM?",
 				"The base plate will be kept</br> at a temperature(in °C) of "];
 
 var options2=[["Printing supports","Slow solidification","Slow feed rate"],//Printing supports
@@ -237,6 +237,10 @@ function magic()
 		    document.getElementById('trial').style="visibility:visible;left: 700px; top: 100px;position: absolute;font-weight: bold;text-transform: uppercase;";
 		    document.getElementById('trial').innerHTML="Trial : " + repeat;
 		    document.getElementById("done").style.visibility= "hidden";
+		document.getElementById("select").style.visibility= "hidden";
+		if($("input[name='d']:checked").val()==0){	document.getElementById('can6-1').innerHTML="Material = ABS";		}
+		if($("input[name='d']:checked").val()==1){	document.getElementById('can6-1').innerHTML="Material = PLA";		}
+		document.getElementById('can6-1').style.visibility="visible";
 		    document.getElementById('nextButton').style.visibility="visible";
 		}  else if(flag==1 && repeat ==3)
 		{
@@ -477,6 +481,7 @@ function refresh1()
 	document.getElementById('can61a').style.visibility="hidden";
 	document.getElementById('can65').style.visibility="hidden";
 	document.getElementById('can61').style.visibility="hidden";
+	document.getElementById('can6-1').style.visibility="hidden";
 	document.getElementById('green').style.visibility="hidden";
 	document.getElementById('41').style.visibility="hidden"
 	document.getElementById('42').style.visibility="hidden"

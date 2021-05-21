@@ -9,7 +9,7 @@ var x1=1.5;
 var x2=0.75;
 var i=0;
 var h=0;
-var t = 10;
+var t = 6;
 var z1 = 0;
 var z2=0;
 var z,sw,v,n;
@@ -55,7 +55,7 @@ function layer(t_,t1,t2,v,v1,v2,v_,frac) {
     //console.log('id for front view is',id1);
     //console.log('path for front view is',path);
     document.getElementById(id1).setAttribute('d',"M25,"+(272.5-(v_*sw))+" l400 0.001") ;
-    //console.log(document.getElementById(id1).getAttribute('d')); 
+    //console.log(document.getElementById(id1).getAttribute('d'));
     var len = 400;
     document.getElementById(id1).style.strokeWidth = sw;
     document.getElementById(id1).style.strokeLinecap = 'round';
@@ -90,22 +90,22 @@ function lastrepeat(v1) {
     document.getElementById(id4).setAttribute('d',"m19.441 111.81 "+d1+" "+d2+""+d3+""+p1001+"") ;
     document.getElementById(id5).setAttribute('d',"m19.441 111.81 "+d1+" "+d2+""+d3+"v-42.55"+p1002+"");
 
-    //console.log(document.getElementById(id1).getAttribute('d')); 
+    //console.log(document.getElementById(id1).getAttribute('d'));
     document.getElementById(id4).style.strokeWidth = 1.4;
     document.getElementById(id4).style.zIndex = v1+1;
     document.getElementById(id5).style.strokeWidth = 1.4;
     document.getElementById(id5).style.zIndex = v1+2;
-    document.getElementById(id4).setAttribute("class","drawrepeat"); 
-    document.getElementById(id5).setAttribute("class","drawrepeat");      
+    document.getElementById(id4).setAttribute("class","drawrepeat");
+    document.getElementById(id5).setAttribute("class","drawrepeat");
 }
 function imgmove(t_,t1,t2,n1,n2,n3,n)
 {
     var lh =0.5;
     var ln = Math.round(4/lh);
     var sw=lh*5;
-    document.getElementById('img0').style.visibility="hidden";   
+    document.getElementById('img0').style.visibility="hidden";
     console.log('cond is false');
-    console.log('imgmove is running'); 
+    console.log('imgmove is running');
     var id3 = 'img'+(n+1)+'';
     //console.log('id3 is',id3);
     var img = document.createElement('img');
@@ -116,22 +116,22 @@ function imgmove(t_,t1,t2,n1,n2,n3,n)
     img.setAttribute('left','170px');
     img.setAttribute('height','75px');
     img.style.visibility='hidden';
-    document.getElementById('step-2').appendChild(img); 
+    document.getElementById('step-2').appendChild(img);
     //console.log('visiblity',document.getElementById(id3).style.visibility);
-    //console.log(document.getElementById(id3).getAttribute('id')); 
+    //console.log(document.getElementById(id3).getAttribute('id'));
     document.getElementById(id3).style.zIndex = n+ln;
     document.getElementById(id3).style.position = "absolute";
     document.getElementById(id3).style.bottom = ''+(130+((n+1)*sw*1.5))+'px';
-    //console.log('bottom is',document.getElementById(id3).style.bottom); 
+    //console.log('bottom is',document.getElementById(id3).style.bottom);
     if ((n<2)  || (n>(ln-3))) {
         document.getElementById(id3).style.animation = "animateimgtb "+t_+"s linear "+((n1*t)+(n2*t1)+(n3*t2))+"s  forwards";
         img.addEventListener("animationstart",()=>{
             img.style.visibility='visible';
         })
         img.addEventListener("animationend",()=>{
-            document.getElementById(id3).style.visibility = "hidden";			}) 
+            document.getElementById(id3).style.visibility = "hidden";			})
     } else {
-        document.getElementById(id3).style.animation = "animateimg "+t_+"s linear "+((n1*t)+(n2*t1)+(n3*t2))+"s  forwards"; 
+        document.getElementById(id3).style.animation = "animateimg "+t_+"s linear "+((n1*t)+(n2*t1)+(n3*t2))+"s  forwards";
         img.addEventListener("animationstart",()=>{
             img.style.visibility='visible';           })
         img.addEventListener("animationend",()=>{
@@ -208,31 +208,31 @@ function first(z) {
 
 function middle1(z,callback,t2) {
     console.log('middle1 is running');
-    if (document.getElementById("infill").innerHTML==20) 
+    if (document.getElementById("infill").innerHTML==20)
     {
         h=12.5;
         p1 = p201;
         p2 = p202;    }
-    else if (document.getElementById("infill").innerHTML==40) 
-    { 
+    else if (document.getElementById("infill").innerHTML==40)
+    {
         h=7.5;
         p1 = p401;
-        p2 = p402;      } 
-    else if (document.getElementById("infill").innerHTML==60) 
+        p2 = p402;      }
+    else if (document.getElementById("infill").innerHTML==60)
     {
         h=5.5;
         p1 = p601;
-        p2 = p602;      } 
-    else if (document.getElementById("infill").innerHTML==80) 
+        p2 = p602;      }
+    else if (document.getElementById("infill").innerHTML==80)
     {
         h=3.75;
         p1 = p801;
-        p2 = p802;     } 
+        p2 = p802;     }
     else
-    { 
-        h=2.75; 
+    {
+        h=2.75;
         p1 = p1001;
-        p2 = p1002;    } 
+        p2 = p1002;    }
     var lh = 0.5;
     console.log('middle1 lh =',lh);
     var ln = Math.round(4/lh);
@@ -258,42 +258,42 @@ function middle1(z,callback,t2) {
         document.getElementById(id2).style.animation = "animate1 "+t1+"s linear "+(2*t+z1*t1+z2*t2)+"s forwards";
         //console.log(len3);
         layer(t1,t1,t2,2,z1,z2,z,0.1243);
-        imgmove(t1,t1,t2,2,z1,z2,z); 
+        imgmove(t1,t1,t2,2,z1,z2,z);
     }
     if (z<(ln-3)) {
         z++;
         z1++;
-        callback(z,t1);  
-    } 
-    
+        callback(z,t1);
+    }
+
 }
 function middle2(z,t1) {
     console.log('middle2 is running');
-    if (document.getElementById("infill").innerHTML==20) 
+    if (document.getElementById("infill").innerHTML==20)
     {
         h=12.5;
         p1 = p201;
         p2 = p202;    }
-    else if (document.getElementById("infill").innerHTML==40) 
-    { 
+    else if (document.getElementById("infill").innerHTML==40)
+    {
         h=7.5;
         p1 = p401;
-        p2 = p402;      } 
-    else if (document.getElementById("infill").innerHTML==60) 
+        p2 = p402;      }
+    else if (document.getElementById("infill").innerHTML==60)
     {
         h=5.5;
         p1 = p601;
-        p2 = p602;      } 
-    else if (document.getElementById("infill").innerHTML==80) 
+        p2 = p602;      }
+    else if (document.getElementById("infill").innerHTML==80)
     {
         h=3.75;
         p1 = p801;
-        p2 = p802;     } 
+        p2 = p802;     }
     else
-    { 
-        h=2.75; 
+    {
+        h=2.75;
         p1 = p1001;
-        p2 = p1002;    } 
+        p2 = p1002;    }
     var lh =0.5;
     console.log('middle2 lh =',lh);
     var ln = Math.round(4/lh);
@@ -366,7 +366,7 @@ function last(z,z1,z2,t1,t2) {
     }
 }
 
-function print() 
+function print()
 {
     myStopFunction();
     var lh = 0.5;
@@ -375,6 +375,5 @@ function print()
     console.log("ln is",ln);
     //imgmove(0);
     first(0);
-    middle1(2,middle2,0);   
+    middle1(2,middle2,0);
 }
-
