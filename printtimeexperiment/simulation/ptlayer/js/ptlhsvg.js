@@ -7,7 +7,7 @@ p6="";
 var i=0;
 var x1=1.5;
 var x2=0.75;
-var t = 10;
+
 var z,sw,v,n;
 var values = [[0.5,28.1],[0.4,33.1],[0.3,39.6],[0.2,55.1]]
 const timer = document.getElementById('dispres');
@@ -58,10 +58,7 @@ function timerCycle(t_val,start1) {
             console.log('elapsed',new Date().getTime());
             console.log('timetimestart is ',start1);
             console.log('timetime is',elapsed1);
-            clearTimeout(mytime);
-            hr = 0;
-             min = 0;
-             sec = 0;} 
+            clearTimeout(mytime);} 
     }
     else if (repeat==2) {
         if (min!=33 || sec!=6) {
@@ -69,30 +66,21 @@ function timerCycle(t_val,start1) {
                    }  
         else{ var elapsed1 = new Date().getTime() - start1;    
             console.log('timetime is',elapsed1);
-            clearTimeout(mytime);
-             hr = 0;
-             min = 0;
-             sec = 0;}
+            clearTimeout(mytime);}
     }
     else if (repeat==3) {
         if (min!=39 || sec!=36) {
             mytime=setTimeout(function(){timerCycle(t_val);},t_val);         }  
            else{var elapsed1 = new Date().getTime() - start1;    
             console.log('timetime is',elapsed1);
-             clearTimeout(mytime);
-             hr = 0;
-             min = 0;
-             sec = 0;} 
+             clearTimeout(mytime);} 
     }
     else if (repeat==4) {
         if (min!=55 || sec!=6) {
             mytime=setTimeout(function(){timerCycle(t_val);},t_val);         }  
            else{var elapsed1 = new Date().getTime() - start1;    
             console.log('timetime is',elapsed1);
-            clearTimeout(mytime);
-              hr = 0;
-             min = 0;
-             sec = 0;} 
+            clearTimeout(mytime);} 
     }
 }
 
@@ -137,6 +125,11 @@ for ( k = 0; k < 16; k=k+2) {
 
 
 function layer(v) {
+    if (repeat==1) {
+        var t = 10; 
+    } else {
+ var t = 6;
+    }
     //console.log('layer is running');
     var lh = document.getElementById("lh").innerHTML;
     //console.log('layer lh =',lh);
@@ -175,6 +168,11 @@ function layer(v) {
 
 function imgmove(n)
 {
+    if (repeat==1) {
+        var t = 10; 
+    } else {
+ var t = 6;
+    }
     //console.log('imgmove is running');
     //console.log("t is",t); 
     var lh =document.getElementById("lh").innerHTML;
@@ -234,6 +232,11 @@ function imgmove(n)
     }
 }
 function first(z) {
+    if (repeat==1) {
+        var t = 10; 
+    } else {
+ var t = 6;
+    }
     //console.log('first is running');
     var path1=document.createElementNS(svgNS,"path");
     svg.appendChild(path1);
@@ -302,9 +305,33 @@ function first(z) {
     {
     document.getElementById("notes").style.visibility="hidden";
     },(((t*3)-1)*1000));
+    setTimeout(function()
+    {
+    document.getElementById("notes").style="position:absolute; font-size:14px; background-color:grey; color:white; padding:7.5px; border-radius:5px; visibility:visible; left:40px; top:500px;"
+    document.getElementById("notes").innerHTML="The extruder nozzle deposits the material in each layer and moves up a distance equal to layer height.";
+    },(((t*3))*1000));
+    setTimeout(function()
+    {
+    document.getElementById("notes").style.visibility="hidden";
+    },(((t*3.75))*1000));
+
+    setTimeout(function()
+    {
+    document.getElementById("notes").style="position:absolute; font-size:14px; background-color:grey; color:white; padding:7.5px; border-radius:5px; visibility:visible; left:150px; top:500px;"
+    document.getElementById("notes").innerHTML="The deposited material bonds with the previous layer and solidifies.";
+    },(((t*3.75)+1)*1000));
+    setTimeout(function()
+    {
+    document.getElementById("notes").style.visibility="hidden";
+    },(((t*4.75))*1000));
    
 }
 function middle1(z,callback) {
+    if (repeat==1) {
+        var t = 10; 
+    } else {
+ var t = 6;
+    }
     //console.log('middle1 is running');
     var lh = document.getElementById("lh").innerHTML;
     //console.log('middle1 lh =',lh);
@@ -332,6 +359,11 @@ function middle1(z,callback) {
     }
 }
 function middle2(z) {
+    if (repeat==1) {
+        var t = 10; 
+    } else {
+ var t = 6;
+    }
     //console.log('middle2 is running');
     var lh = document.getElementById("lh").innerHTML;
     //console.log('middle2 lh =',lh);
@@ -361,6 +393,11 @@ function middle2(z) {
 
 
 function last(z) {
+    if (repeat==1) {
+        var t = 10; 
+    } else {
+ var t = 6;
+    }
     //console.log('last is running');
     var path5=document.createElementNS(svgNS,"path");
     svg.appendChild(path5);
@@ -390,11 +427,19 @@ function last(z) {
     document.getElementById(id6).style.zIndex=z+1;
     document.getElementById(id6).style.animation = "animatelast "+t+"s linear "+((z+1)*t)+"s forwards";
     console.log(document.getElementById(id6).style.animation); 
+    document.getElementById(id6).addEventListener("animationend",()=>{
+        clearTimeout(mytime);
+        })
 }
 
 
 function print() 
 {
+    if (repeat==1) {
+        var t = 10; 
+    } else {
+ var t = 6;
+    }
     var lh = document.getElementById("lh").innerHTML;
     console.log('print lh =',lh);
     var ln = Math.round(4/lh);

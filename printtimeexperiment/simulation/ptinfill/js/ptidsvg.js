@@ -9,7 +9,8 @@ var x1=1.5;
 var x2=0.75;
 var i=0;
 var h=0;
-var t = 10;
+
+
 var z1 = 0;
 var z2=0;
 var z,sw,v,n,t_tot;
@@ -63,51 +64,36 @@ function timerCycle(t_val,start1) {
             console.log('elapsed',new Date().getTime());
             console.log('timetimestart is ',start1);
             console.log('timetime is',elapsed1);
-            clearTimeout(mytime);
-            hr = 0;
-             min = 0;
-             sec = 0;}
+            clearTimeout(mytime);}
     }
     else if (repeat==2) {
         if (min!=33 || sec!=18) {
             mytime=setTimeout(function(){timerCycle(t_val);},t_val);
-                   }
+        }
         else{ var elapsed1 = new Date().getTime() - start1;
             console.log('timetime is',elapsed1);
-            clearTimeout(mytime);
-             hr = 0;
-             min = 0;
-             sec = 0;}
+            clearTimeout(mytime);}
     }
     else if (repeat==3) {
         if (min!=39 || sec!=6) {
             mytime=setTimeout(function(){timerCycle(t_val);},t_val);         }
            else{var elapsed1 = new Date().getTime() - start1;
             console.log('timetime is',elapsed1);
-             clearTimeout(mytime);
-             hr = 0;
-             min = 0;
-             sec = 0;}
+             clearTimeout(mytime);}
     }
     else if (repeat==4) {
         if (min!=44 || sec!=48) {
             mytime=setTimeout(function(){timerCycle(t_val);},t_val);         }
            else{var elapsed1 = new Date().getTime() - start1;
             console.log('timetime is',elapsed1);
-            clearTimeout(mytime);
-              hr = 0;
-             min = 0;
-             sec = 0;}
+            clearTimeout(mytime);}
     }
     else if (repeat==5) {
         if (min!=50 || sec!=36) {
             mytime=setTimeout(function(){timerCycle(t_val);},t_val);         }
            else{var elapsed1 = new Date().getTime() - start1;
             console.log('timetime is',elapsed1);
-            clearTimeout(mytime);
-              hr = 0;
-             min = 0;
-             sec = 0;}
+            clearTimeout(mytime);}
     }
 }
 
@@ -150,6 +136,11 @@ for ( k = 0; k < 16; k=k+2) {
     }
 }
 function layer(t_,t1,t2,v,v1,v2,v_,frac) {
+    if (repeat==1) {
+        var t = 10; 
+    } else {
+        var t = 6;
+    }
     console.log('layer is running');
     console.log('t_=',t_,'t1=',t1,'t2=',t2,'v=',v,'v1=',v1,'v2=',v2,'v_=',v_,'frac=',frac)
     var id0 = 'layer'+(v_+1)+(repeat)+'';
@@ -178,6 +169,11 @@ function layer(t_,t1,t2,v,v1,v2,v_,frac) {
 }
 function imgmove(t_,t1,t2,n1,n2,n3,n)
 {
+    if (repeat==1) {
+        var t = 10; 
+    } else {
+ var t = 6;
+    }
     var lh =0.3
     var ln = Math.round(4/lh);
     var sw=lh*5;
@@ -227,6 +223,11 @@ function imgmove(t_,t1,t2,n1,n2,n3,n)
 }
 
 function first(z) {
+    if (repeat==1) {
+        var t = 10; 
+    } else {
+ var t = 6;
+    }
     console.log('first is running');
     var path1=document.createElementNS(svgNS,"path");
     svg.appendChild(path1);
@@ -300,9 +301,34 @@ function first(z) {
     {
     document.getElementById("notes").style.visibility="hidden";
     },(((t*3)-1)*1000));
+
+    setTimeout(function()
+    {
+    document.getElementById("notes").style="position:absolute; font-size:14px; background-color:grey; color:white; padding:7.5px; border-radius:5px; visibility:visible; left:40px; top:500px;"
+    document.getElementById("notes").innerHTML="The extruder nozzle deposits the material in each layer and moves up a distance equal to layer height.";
+    },(((t*3))*1000));
+    setTimeout(function()
+    {
+    document.getElementById("notes").style.visibility="hidden";
+    },(((t*3.75))*1000));
+
+    setTimeout(function()
+    {
+    document.getElementById("notes").style="position:absolute; font-size:14px; background-color:grey; color:white; padding:7.5px; border-radius:5px; visibility:visible; left:150px; top:500px;"
+    document.getElementById("notes").innerHTML="The deposited material bonds with the previous layer and solidifies.";
+    },(((t*3.75)+1)*1000));
+    setTimeout(function()
+    {
+    document.getElementById("notes").style.visibility="hidden";
+    },(((t*4.75))*1000));
  }
 
 function middle1(z,z1,z2,callback,t2) {
+    if (repeat==1) {
+        var t = 10; 
+    } else {
+ var t = 6;
+    }
     console.log('middle1 is running');
     if (document.getElementById("id").innerHTML==20) {
         h=12.5;
@@ -419,6 +445,11 @@ function middle1(z,z1,z2,callback,t2) {
     }else{    last(z,z1,z2,t1,t2);}
 }
 function middle2(z,z1,z2,t1) {
+    if (repeat==1) {
+        var t = 10; 
+    } else {
+ var t = 6;
+    }
     ////console.log('middle2 is running');
     if (document.getElementById("id").innerHTML==20) {
         h=12.5;
@@ -536,6 +567,11 @@ function middle2(z,z1,z2,t1) {
 
 
 function last(z,z1,z2,t1,t2) {
+    if (repeat==1) {
+        var t = 10; 
+    } else {
+ var t = 6;
+    }
     console.log('last is running');
     var path5=document.createElementNS(svgNS,"path");
     svg.appendChild(path5);
@@ -570,14 +606,23 @@ function last(z,z1,z2,t1,t2) {
     console.log('%c last2=', "color: red; font-style: italic;", document.getElementById(id6).style.animation);
     t_tot = 4*t+z1*t1+((z2+1)*t2);
     console.log('t is',t,'z1=',z1,'z2=',z2,'t1=',t1,'t2=',t2);
-    console.log('t_tot=',t_tot);
+    console.log('t_tot  =',t_tot);
     layer(t,t1,t2,3,z1,z2+1,12,0.0363);
     imgmove(t,t1,t2,3,z1,z2+1,12);
+
+    document.getElementById(id6).addEventListener("animationend",()=>{
+        clearTimeout(mytime);
+        })
 }
 
 
 function print()
 {
+    if (repeat==1) {
+        var t = 10; 
+    } else {
+ var t = 6;
+    }
     var lh = 0.3;
     var ln = Math.round(4/lh);
     var t_sec = Math.floor((infillvalues[repeat-1][1])*60);
@@ -605,7 +650,7 @@ function print()
         var t_total=(4*t+4*(len3*t/11662.668945)+5*(len4*t/11662.668945));
     }
     console.log(t_total)
-    var t_val = ((t_total*3*1000)/t_sec);
+    var t_val = Math.floor((t_total*3*1000)/t_sec);
     console.log('print t_val =',t_val);
     console.log(t_sec*t_val);
     myStopFunction();

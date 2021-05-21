@@ -3,7 +3,7 @@ var a=[];
 var surfaceroughnessarray=[];
 var d,p,n=0,b,q,flag=0;
 var infillvalues = [[20,27.5],[40,33.3],[60,39.1],[80,44.8],[100,50.6]];
-//console.log('infillvalues=',infillvalues);
+var timearray = [];
 p1="";
 p2="";
 p3="";
@@ -14,7 +14,11 @@ p7="";
 var i=0;
 var x1=1.5;
 var x2=0.75;
-var t = 10;
+if (repeat==1) {
+	var t = 10; 
+} else {
+	var t = 6;
+}
 var z,sw,v;
 var svg= document.getElementById('specimen');
 var svgNS = "http://www.w3.org/2000/svg";
@@ -148,6 +152,9 @@ function magic()
 		repeat+=1;
 		if(flag==1)
 		{
+			hr = 0;
+			min = 0;
+			sec = 0;
 			//console.log('flagis1');
 		document.getElementById('canvas3').style.visibility="hidden";
 		document.getElementById('arrow1').style.visibility='hidden';
@@ -246,6 +253,11 @@ function magic()
 		document.getElementById('dispres2').innerHTML= document.getElementById('dispres').innerHTML;
 		document.getElementById("check3").style.visibility="visible";
 		document.getElementById("hint").style.visibility="visible";
+		var time1 = ((parseInt(hr)*3600+parseInt(min)*60+parseInt(sec))/60);
+		time = Math.round(time1 * 100) / 100;
+		console.log("time is =", time)
+		timearray.push(time);
+		console.log("timearray is =", timearray)
 		document.getElementById("check3").onclick=function()
 		{
 			n = n+1;
@@ -255,8 +267,8 @@ function magic()
 			}
 			else
 			{
+				console.log("hr=",hr,"min=",min,"sec=",sec)
 				timeval = document.getElementById("timeval").value;
-				time =infillvalues[repeat-1][1];
 				if(Math.round(timeval) == Math.round(time))
 				{
 					document.getElementById("check3").style.visibility="hidden";
@@ -287,7 +299,7 @@ function magic()
 			document.getElementById("rw").style.visibility="hidden";
 			document.getElementById("formula").style.visibility="hidden";
 			document.getElementById("hint").style.visibility="hidden";
-			document.getElementById("timeval").value =  infillvalues[repeat-1][1];
+			document.getElementById("timeval").value = Math.round(((parseInt(hr)*3600+parseInt(min)*60+parseInt(sec))/60)* 100) / 100;;
 			document.getElementById("nextButton").style.visibility="visible";
 		}
 		if(repeat < 5 && repeat>0)
@@ -307,11 +319,11 @@ function magic()
 		document.getElementById('3-1').innerHTML=infillvalues[2][0];
 		document.getElementById('4-1').innerHTML=infillvalues[3][0];
 		document.getElementById('5-1').innerHTML=infillvalues[4][0];
-		document.getElementById('1-2').innerHTML=infillvalues[0][1];
-		document.getElementById('2-2').innerHTML=infillvalues[1][1];
-		document.getElementById('3-2').innerHTML=infillvalues[2][1];
-		document.getElementById('4-2').innerHTML=infillvalues[3][1];
-		document.getElementById('5-2').innerHTML=infillvalues[4][1];
+		document.getElementById('1-2').innerHTML=timearray[0];
+		document.getElementById('2-2').innerHTML=timearray[1];
+		document.getElementById('3-2').innerHTML=timearray[2];
+		document.getElementById('4-2').innerHTML=timearray[3];
+		document.getElementById('5-2').innerHTML=timearray[4];
 		document.getElementById('inferenceDiv').style.visibility='visible';
 	}
 

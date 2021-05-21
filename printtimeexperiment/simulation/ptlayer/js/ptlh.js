@@ -5,6 +5,7 @@ var a=[];
 var surfaceroughnessarray=[];
 var d,p,n=0,b,q,time,timeval,flag=0;
 var values = [[0.5,28.1],[0.4,33.1],[0.3,39.6],[0.2,55.1]]
+var timearray = [];
 
 p1="";
 p2="";
@@ -16,7 +17,11 @@ p7="";
 var i=0;
 var x1=1.5;
 var x2=0.75;
-var t = 10;
+if (repeat==1) {
+	var t = 10; 
+} else {
+	var t = 6;
+}
 var z,sw,v;
 var svg= document.getElementById('specimen');
 var svgNS = "http://www.w3.org/2000/svg";	
@@ -147,6 +152,9 @@ function magic()
 		repeat+=1;
 		if(flag==1)
 		{
+			hr = 0;
+			min = 0;
+			sec = 0;
 		console.log('flagis1');
 		document.getElementById('canvas3').style.visibility="hidden";
 		document.getElementById('arrow1').style.visibility='hidden';
@@ -244,6 +252,11 @@ function magic()
 		document.getElementById('dispres2').innerHTML= document.getElementById('dispres').innerHTML;
 		document.getElementById("check3").style.visibility="visible";
 		document.getElementById("hint").style.visibility="visible";
+		var time1  = ((parseInt(hr)*3600+parseInt(min)*60+parseInt(sec))/60);
+		time = Math.round(time1 * 100) / 100;
+		console.log("time is =", time)
+		timearray.push(time);
+		console.log("timearray is =", timearray)
 		document.getElementById("check3").onclick=function()
 		{
 			console.log('n is',n,'repeat is',repeat)
@@ -255,7 +268,6 @@ function magic()
 			else
 			{
 				timeval = document.getElementById("timeval").value;
-				time = values[repeat-1][1];
 				if(Math.round(timeval) == Math.round(time))
 				{
 					document.getElementById("check3").style.visibility="hidden";
@@ -286,7 +298,7 @@ function magic()
 			document.getElementById("rw").style.visibility="hidden";
 			document.getElementById("formula").style.visibility="hidden";
 			document.getElementById("hint").style.visibility="hidden";
-			document.getElementById("timeval").value =  values[repeat-1][1];
+			document.getElementById("timeval").value = Math.round(((parseInt(hr)*3600+parseInt(min)*60+parseInt(sec))/60)* 100) / 100;;
 			document.getElementById("nextButton").style.visibility="visible";
 		}
 		if(repeat < 4 && repeat>0)
@@ -305,10 +317,10 @@ function magic()
 		document.getElementById('2-1').innerHTML=values[1][0];
 		document.getElementById('3-1').innerHTML=values[2][0];
 		document.getElementById('4-1').innerHTML=values[3][0];
-		document.getElementById('1-2').innerHTML=values[0][1];
-		document.getElementById('2-2').innerHTML=values[1][1];
-		document.getElementById('3-2').innerHTML=values[2][1];
-		document.getElementById('4-2').innerHTML=values[3][1];
+		document.getElementById('1-2').innerHTML=timearray[0];
+		document.getElementById('2-2').innerHTML=timearray[1];
+		document.getElementById('3-2').innerHTML=timearray[2];
+		document.getElementById('4-2').innerHTML=timearray[3];
 		document.getElementById('inferenceDiv').style.visibility='visible';	
 	}				
 }
