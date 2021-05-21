@@ -7,7 +7,7 @@ p6="";
 var i=0;
 var x1=1.5;
 var x2=0.75;
-var t = 15;
+var t = 6;
 var z,sw,v,n;
 var values = [[0.5,21.94,24.43],[0.4,18.18,20.67],[0.3,14.42,16.91],[0.2,10.66,13.15],[0.1,6.9,9.38]]
 
@@ -19,9 +19,9 @@ for ( i = 0; i < 15; i=i+2) {
         p1 += "h2.75 l"+(i+1)*-2.75+" "+(i+1)*-2.75+ "v-2.75 l"+(i+2)*2.75+" "+(i+2)*2.75+"";
         p4 += "h2.75 l"+(i+1)*-2.75+" "+(i+1)*2.75+ "v2.75 l"+(i+2)*2.75+" "+(i+2)*-2.75+"";
     } else {
-        p1 += "h2.75 l"+(i+1)*-2.75+" "+(i+1)*-2.75+"v-1.25";  
-        p4 += "h2.75 l"+(i+1)*-2.75+" "+(i+1)*2.75+"v1.25";              
-    } 
+        p1 += "h2.75 l"+(i+1)*-2.75+" "+(i+1)*-2.75+"v-1.25";
+        p4 += "h2.75 l"+(i+1)*-2.75+" "+(i+1)*2.75+"v1.25";
+    }
 }
 
 for (j = 0; j < 64; j++) {
@@ -31,8 +31,8 @@ for (j = 0; j < 64; j++) {
         x1 =2.75;
     } else {
         p2+="h2.75 l42.5 42.5h2";
-        p5+="h2.75 l42.5 -42.5h2";        
-    }    
+        p5+="h2.75 l42.5 -42.5h2";
+    }
 }
 
 for ( k = 0; k < 16; k=k+2) {
@@ -43,7 +43,7 @@ for ( k = 0; k < 16; k=k+2) {
     } else {
         p3 += "v-2.75l"+(-(41.75-k*2.75))+" "+(-(41.75-k*2.75))+" ";
         p6 += "v2.75l"+(-(41.75-k*2.75))+" "+(41.75-k*2.75)+" ";
-        
+
     }
 }
 
@@ -68,7 +68,7 @@ function layer(v) {
     //console.log('id for front view is',id1);
     console.log('path for front view is',path);
     document.getElementById(id1).setAttribute('d',"M25,"+(272.5-(v*sw))+" l400 0.001") ;
-    //console.log(document.getElementById(id1).getAttribute('d')); 
+    //console.log(document.getElementById(id1).getAttribute('d'));
     var len = 400;
     document.getElementById(id1).style.strokeWidth = sw;
     document.getElementById(id1).style.strokeLinecap = 'round';
@@ -80,9 +80,9 @@ function layer(v) {
     if (v<(ln-1)) {
         v++;
        // console.log('new v is',v)
-        layer(v);     
+        layer(v);
     }
-    
+
 }
 function layerrepeat(v1,v2) {
     console.log('layerrepeat is running');
@@ -99,7 +99,7 @@ function layerrepeat(v1,v2) {
     //console.log('id for front view is',id1);
     //console.log('path for front view is',path);
     document.getElementById(id4).setAttribute('d',"M25,"+(272.5-(v1*sw))+" l400 0.001") ;
-    //console.log(document.getElementById(id1).getAttribute('d')); 
+    //console.log(document.getElementById(id1).getAttribute('d'));
     document.getElementById(id4).style.strokeWidth = sw;
     document.getElementById(id4).style.strokeLinecap = 'round';
     document.getElementById(id4).style.zIndex = v1+1;
@@ -108,9 +108,9 @@ function layerrepeat(v1,v2) {
     if (v1<(ln-1)) {
         v1++;
        // console.log('new v is',v)
-        layerrepeat(v1,v2);     
+        layerrepeat(v1,v2);
     }
-    
+
 }
 function imgmove(n)
 {
@@ -118,13 +118,13 @@ function imgmove(n)
     console.log('imgmove lh =',lh);
     var ln = Math.round(4/lh);
     var sw=lh*5;
-    document.getElementById('img0').style.visibility="hidden";   
+    document.getElementById('img0').style.visibility="hidden";
     console.log('cond is false');
     console.log('imgmove is running');
     var lh =document.getElementById("lh").innerHTML;
     var ln = Math.round(4/lh);
     var sw=lh*5;
-   
+
     var id3 = 'img'+(n+1)+'';
     //console.log('id3 is',id3);
     var img = document.createElement('img');
@@ -135,47 +135,26 @@ function imgmove(n)
     img.setAttribute('left','170px');
     img.setAttribute('height','75px');
     img.style.visibility='hidden';
-    document.getElementById('step-2').appendChild(img); 
+    document.getElementById('step-2').appendChild(img);
     //console.log('visiblity',document.getElementById(id3).style.visibility);
-    //console.log(document.getElementById(id3).getAttribute('id')); 
+    //console.log(document.getElementById(id3).getAttribute('id'));
     document.getElementById(id3).style.zIndex = n+ln;
     document.getElementById(id3).style.position = "absolute";
     document.getElementById(id3).style.bottom = ''+(130+((n+1)*sw*1.5))+'px';
-    //console.log('bottom is',document.getElementById(id3).style.bottom); 
+    //console.log('bottom is',document.getElementById(id3).style.bottom);
     if ((n<2)  || (n>(ln-3))) {
-     
         document.getElementById(id3).style.animation = "animateimgtb "+t+"s linear "+(t*n)+"s  forwards";
-        img.addEventListener("animationstart",()=>{
-            console.log('animationimgtb has started');
-            img.style.visibility='visible';
-           
-        })
-        img.addEventListener("animationend",()=>{
-            console.log('animationimgtb has ended');
-            document.getElementById(id3).style.visibility = "hidden";			})
-       
-        //console.log(document.getElementById(id3).style.animation); 
-        
+        img.addEventListener("animationstart",()=>{  img.style.visibility='visible';        })
+        img.addEventListener("animationend",()=>{  document.getElementById(id3).style.visibility = "hidden";			})
     } else {
-       
-        document.getElementById(id3).style.animation = "animateimg "+t+"s linear "+(t*n)+"s  forwards"; 
-        img.addEventListener("animationstart",()=>{
-            console.log('animationimgtb has started');
-            img.style.visibility='visible';           })
-        img.addEventListener("animationend",()=>{
-            console.log('animationimgtb has ended');
-            img.style.visibility = "hidden";			})
-       
-        //console.log(document.getElementById(id3).style.animation); 
-        
+        document.getElementById(id3).style.animation = "animateimg "+t+"s linear "+(t*n)+"s  forwards";
+        img.addEventListener("animationstart",()=>{  img.style.visibility='visible';        })
+        img.addEventListener("animationend",()=>{  img.style.visibility = "hidden";         })
     }
-    if (n<(ln-1)) 
+    if (n<(ln-1))
     {
         n++;
-        //console.log("new n for img is",n);
-       
         imgmove(n);
-        
     }
 }
 
@@ -238,7 +217,26 @@ function first(z) {
     {
     document.getElementById("notes").style.visibility="hidden";
     },(((t*3)-1)*1000));
-   
+    setTimeout(function()
+    {
+    document.getElementById("notes").style="position:absolute; font-size:14px; background-color:grey; color:white; padding:7.5px; border-radius:5px; visibility:visible; left:40px; top:250px;"
+    document.getElementById("notes").innerHTML="The extruder nozzle deposits the material in each layer and moves up a distance equal to layer height.";
+    },(((t*3))*1000));
+    setTimeout(function()
+    {
+    document.getElementById("notes").style.visibility="hidden";
+    },(((t*3.75))*1000));
+
+    setTimeout(function()
+    {
+    document.getElementById("notes").style="position:absolute; font-size:14px; background-color:grey; color:white; padding:7.5px; border-radius:5px; visibility:visible; left:150px; top:250px;"
+    document.getElementById("notes").innerHTML="The deposited material bonds with the previous layer and solidifies.";
+    },(((t*3.75)+1)*1000));
+    setTimeout(function()
+    {
+    document.getElementById("notes").style.visibility="hidden";
+    },(((t*4.75))*1000));
+
 }
 function middle1(z,callback) {
     console.log('middle1 is running');
@@ -266,9 +264,9 @@ function middle1(z,callback) {
         z++;
       //  console.log("new z for middle2 is",z);
         callback(z);
-        
+
     }
-   
+
 }
 function middle2(z) {
     console.log('middle2 is running');
@@ -294,9 +292,9 @@ function middle2(z) {
         z++;
       //  console.log("new z for middle1 is",z);
         middle1(z,middle2);
-        
+
     }
-    
+
 }
 
 
@@ -319,11 +317,11 @@ function last(z) {
     document.getElementById('drawlayer6').style.strokeWidth = 1.4;
     document.getElementById('drawlayer6').style.zIndex=z+1;
     document.getElementById('drawlayer6').style.animation = "animatelast "+t+"s linear "+((z+1)*t)+"s forwards";
-   
+
 }
 
 
-function print() 
+function print()
 {
     myStopFunction();
     var lh = document.getElementById("lh").innerHTML;
@@ -335,6 +333,5 @@ function print()
     first(0);
     middle1(2,middle2);
     last((ln-2));
-    
-}
 
+}

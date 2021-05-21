@@ -16,19 +16,20 @@ p7="";
 var i=0;
 var x1=1.5;
 var x2=0.75;
-var t = 10;
+var t = 7.5;
 var z,sw,v;
 var svg= document.getElementById('specimen');
-var svgNS = "http://www.w3.org/2000/svg";	
+var svgNS = "http://www.w3.org/2000/svg";
 
 function navNext()
 {
 	console.log('next button pressed');
-  for (temp = 0; temp <= 4 ; temp++) 
-  { 
+  for (temp = 0; temp <= 4 ; temp++)
+  {
       document.getElementById('canvas'+temp).style.visibility="hidden";
   }
-
+  document.getElementById('step-2').setAttribute('class','step');
+  document.getElementById('specimen').setAttribute('class','svg');
  simsubscreennum+=1;
  document.getElementById('canvas'+(simsubscreennum)).style.visibility="visible";
  document.getElementById('nextButton').style.visibility="hidden";
@@ -41,7 +42,7 @@ var questions=["Which defect is caused by <br>higher printing speed?",
 				"The exrtruder head will be </br> at a temperature(in °C) of "];
 
 var options2=[["Curling","Ghosting","Stringing","Warping"],//Ghosting
-			  ["Curling","Stringing","Z-wobble"],//Curling
+			  ["Curling","Warping","Z-wobble"],//Curling
 			  ["100","500","350","200"]];//200
 
 function validateAnswer(qn,ans,left,top)
@@ -91,9 +92,9 @@ for ( i = 0; i < 15; i=i+2) {
         p1 += "h2.75 l"+(i+1)*-2.75+" "+(i+1)*-2.75+ "v-2.75 l"+(i+2)*2.75+" "+(i+2)*2.75+"";
         p4 += "h2.75 l"+(i+1)*-2.75+" "+(i+1)*2.75+ "v2.75 l"+(i+2)*2.75+" "+(i+2)*-2.75+"";
     } else {
-        p1 += "h2.75 l"+(i+1)*-2.75+" "+(i+1)*-2.75+"v-1.25";  
-        p4 += "h2.75 l"+(i+1)*-2.75+" "+(i+1)*2.75+"v1.25";              
-    } 
+        p1 += "h2.75 l"+(i+1)*-2.75+" "+(i+1)*-2.75+"v-1.25";
+        p4 += "h2.75 l"+(i+1)*-2.75+" "+(i+1)*2.75+"v1.25";
+    }
 }
 
 for (j = 0; j < 64; j++) {
@@ -103,8 +104,8 @@ for (j = 0; j < 64; j++) {
         x1 =2.75;
     } else {
         p2+="h2.75 l42.5 42.5h2";
-        p5+="h2.75 l42.5 -42.5h2";        
-    }    
+        p5+="h2.75 l42.5 -42.5h2";
+    }
 }
 
 for ( k = 0; k < 16; k=k+2) {
@@ -115,7 +116,7 @@ for ( k = 0; k < 16; k=k+2) {
     } else {
         p3 += "v-2.75l"+(-(41.75-k*2.75))+" "+(-(41.75-k*2.75))+" ";
         p6 += "v2.75l"+(-(41.75-k*2.75))+" "+(41.75-k*2.75)+" ";
-        
+
     }
 }
 
@@ -130,7 +131,7 @@ function animatearrow()
 }
 
 //stop blinking arrow
-function myStopFunction() 
+function myStopFunction()
 {
 console.log('mystopfunction is running');
 clearInterval(myInt);
@@ -141,7 +142,7 @@ document.getElementById('arrow1').style.visibility="hidden";
 
 function magic()
 {
-	
+
 	if (simsubscreennum==1)
 	{
 		refresh2();
@@ -162,7 +163,11 @@ function magic()
 		document.getElementById('trial').style="visibility:visible;left: 700px; top: 100px;position: absolute;font-weight: bold;text-transform: uppercase;";
 		document.getElementById('trial').innerHTML="Trial : " + repeat;
 		document.getElementById("done").style.visibility= "hidden";
-		document.getElementById('nextButton').style.visibility="visible";		 
+		document.getElementById("select").style.visibility= "hidden";
+		if($("input[name='d']:checked").val()==0){	document.getElementById('can6-1').innerHTML="Material = ABS";		}
+		if($("input[name='d']:checked").val()==1){	document.getElementById('can6-1').innerHTML="Material = PLA";		}
+		document.getElementById('can6-1').style.visibility="visible";
+		document.getElementById('nextButton').style.visibility="visible";
 		}
 	else{
 		console.log('flagis0');
@@ -173,7 +178,7 @@ function magic()
 		document.getElementById('can6-3').innerHTML="Layer height  = "+0.5  +" mm" ;
 		document.getElementById('trial').style="visibility:visible;left: 700px; top: 100px;position: absolute;font-weight: bold;text-transform: uppercase;";
 		document.getElementById('trial').innerHTML="Trial : " + repeat;
-		
+
 		document.getElementById("done").onclick=function()
 		{
 			//console.log("lh value is",document.getElementById("lh").value);
@@ -185,11 +190,11 @@ function magic()
 			else
 			{
 				document.getElementById('nextButton').style.visibility="visible";
-			}	
-		}	
+			}
+		}
 	}
 }
-	
+
 	else if (simsubscreennum==2)
 	{
 		refresh1();
@@ -205,23 +210,23 @@ function magic()
 		document.getElementById('base').style.visibility="visible";
 		myInt = setInterval(animatearrow, 500);
 		document.getElementById('arrow1').style="visibility:visible ;position:absolute; right: 730px; bottom: 147.5px; height: 40px; z-index: 10;";
-	   	document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
+	   	document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)";
 	   	//Code for IE9
-	   	document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
+	   	document.getElementById("arrow1").style.msTransform = "rotate(180deg)";
 		// Standard syntax
 	   	document.getElementById("arrow1").style.transform = "rotate(180deg)";
-	}	
-	
+	}
+
 	else if (simsubscreennum==3)
 	{
 		refresh1();
 		document.getElementById('nextButton').style.visibility="hidden";
 		myInt = setInterval(animatearrow, 500);
 		console.log('myint in step3',myInt);
-		document.getElementById('arrow1').style="position:absolute; right: 640px; top: 240px; height: 40px; z-index: 10;";	
-		document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
+		document.getElementById('arrow1').style="position:absolute; right: 640px; top: 240px; height: 40px; z-index: 10;";
+		document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)";
 		//Code for IE9
-		document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
+		document.getElementById("arrow1").style.msTransform = "rotate(180deg)";
 		// Standard syntax
 		document.getElementById("arrow1").style.transform = "rotate(180deg)";
 		document.getElementById('probe1').style.visibility='visible';
@@ -232,7 +237,7 @@ function magic()
 		 {
 			 flag=1;
 			 simsubscreennum=0;
-		 }			
+		 }
 	}
 	else if (simsubscreennum==4)
 	{
@@ -243,7 +248,7 @@ function magic()
 		document.getElementById('spec2').style.visibility='hidden';
 		document.getElementById('probe1').style.visibility = "hidden";
 		document.getElementById('probe2').style.visibility = "hidden";
-		document.getElementById('dispres').style.visibility="hidden";	
+		document.getElementById('dispres').style.visibility="hidden";
 		document.getElementById('trial').style.visibility='hidden';
 		document.getElementById('1-1').innerHTML=speedvalues[0][0];
 		document.getElementById('2-1').innerHTML=speedvalues[1][0];
@@ -255,8 +260,8 @@ function magic()
 			document.getElementById('2-2').innerHTML=speedvalues[1][1];
 			document.getElementById('3-2').innerHTML=speedvalues[2][1];
 			document.getElementById('4-2').innerHTML=speedvalues[3][1];
-			document.getElementById('5-2').innerHTML=speedvalues[4][1];	
-		} 
+			document.getElementById('5-2').innerHTML=speedvalues[4][1];
+		}
 		if($("input[name='d']:checked").val()==0) {
 			document.getElementById('1-2').innerHTML=speedvalues[0][2];
 			document.getElementById('2-2').innerHTML=speedvalues[1][2];
@@ -264,8 +269,8 @@ function magic()
 			document.getElementById('4-2').innerHTML=speedvalues[3][2];
 			document.getElementById('5-2').innerHTML=speedvalues[4][2];
 		}
-		document.getElementById('inferenceDiv').style.visibility='visible';	
-	}				
+		document.getElementById('inferenceDiv').style.visibility='visible';
+	}
 }
 
 function spec(){
@@ -275,14 +280,14 @@ function spec(){
 	document.getElementById('spec2').style="visibility:visible ;position: absolute; left: 205px; top: 365px; height:20px;width:100px; z-index: 10;";
 	myInt = setInterval(animatearrow, 500);
 	document.getElementById('arrow1').style="position:absolute; left: 540px; top: 240px; height: 40px; z-index: 10;";
-	document.getElementById("arrow1").style.WebkitTransform = "rotate(360deg)"; 
+	document.getElementById("arrow1").style.WebkitTransform = "rotate(360deg)";
 		// Code for IE9
-	document.getElementById("arrow1").style.msTransform = "rotate(360deg)"; 
+	document.getElementById("arrow1").style.msTransform = "rotate(360deg)";
 		// Standard syntax
 	document.getElementById("arrow1").style.transform = "rotate(360deg)";
 	document.getElementById('display').onclick=function() { ani1(); };
   }
-  
+
 
 
 function ani1(){
@@ -295,13 +300,13 @@ function ani1(){
 		document.getElementById('probe2').style.visibility = "visible";
 		myInt = setInterval(function(){ animatearrow(); }, 500);
 		document.getElementById('arrow1').style="position:absolute; left: 300px; top: 320px; height: 40px; z-index: 10;";
-		document.getElementById("arrow1").style.WebkitTransform = "rotate(270deg)"; 
+		document.getElementById("arrow1").style.WebkitTransform = "rotate(270deg)";
 		// Code for IE9
-		document.getElementById("arrow1").style.msTransform = "rotate(270deg)"; 
+		document.getElementById("arrow1").style.msTransform = "rotate(270deg)";
 		// Standard syntax
-		document.getElementById("arrow1").style.transform = "rotate(270deg)";	
+		document.getElementById("arrow1").style.transform = "rotate(270deg)";
 		document.getElementById('probe2').onclick=function() { ani2(); };
-		}, 3000);	
+		}, 3000);
   }
   function ani2(){
 	myStopFunction();
@@ -313,48 +318,48 @@ function ani1(){
 			document.getElementById('dispres').style.visibility="visible";
 			document.getElementById('sr1').style.visibility="hidden";
 			document.getElementById('sr2').innerHTML ="Surface Roughness of specimen = "+speedvalues[repeat-1][1]+" &#181m";
-			document.getElementById('sr2').style.visibility="visible";			
-		} 
+			document.getElementById('sr2').style.visibility="visible";
+		}
 		if($("input[name='d']:checked").val()==0) {
 			document.getElementById('dispres').innerHTML =""+(speedvalues[repeat-1][2])+" &#181m";
 			document.getElementById('dispres').style.visibility="visible";
 			document.getElementById('sr1').style.visibility="hidden";
 			document.getElementById('sr2').innerHTML ="Surface Roughness of specimen = "+speedvalues[repeat-1][2]+" &#181m";
-			document.getElementById('sr2').style.visibility="visible";		
+			document.getElementById('sr2').style.visibility="visible";
 		}
 		if (repeat==1) {
 			setTimeout(function()
 				{
 					validateAnswer(0,1,"50px","100px");
-				},500);				
+				},500);
 		}
 		else if (repeat==3) {
 			setTimeout(function()
 			{
 				validateAnswer(1,0,"50px","100px");
-			},500);	
+			},500);
 		}
 		else if (repeat==4){
 			setTimeout(function()
 			{
 				validateAnswer(2,3,"50px","100px");
-			},500);	
+			},500);
 		}
 		else {
 			document.getElementById('nextButton').style.visibility="visible";
-		}		
+		}
 		}, 6000);	  }
-  
+
 function refresh1()
 {
 	if (repeat>1) {
-		myStopFunction();	
+		myStopFunction();
 		document.getElementById('drawlayer1'+(repeat-1)+'').style.animation = "";
 		document.getElementById('drawlayer2'+(repeat-1)+'').style.animation = "";
 		for (let z = 2; z <10; z++) {
-			document.getElementById('drawlayer'+(z-1)+(repeat-1)+'').style.animation = "";	
+			document.getElementById('drawlayer'+(z-1)+(repeat-1)+'').style.animation = "";
 			console.log(z-1);
-			document.getElementById('img'+(z-1)+'').style.animation = "";		
+			document.getElementById('img'+(z-1)+'').style.animation = "";
 		}
 		document.getElementById('drawlayer3'+(repeat-1)+'').style.animation = "";
 		document.getElementById('drawlayer4'+(repeat-1)+'').style.animation = "";
@@ -364,6 +369,7 @@ function refresh1()
 	document.getElementById('step-2').style.visibility='hidden';
 	document.getElementById('specimen').style.visibility='hidden';
 	document.getElementById('base').style.visibility='hidden';
+	document.getElementById('can6-1').style.visibility="hidden";
 }
 
 function refresh2()
@@ -379,15 +385,15 @@ function refresh2()
 }
 function refresh3()
 {
-	if (repeat>1) 
+	if (repeat>1)
 	{
-		for (let index = 0; index < 8; index++) 
+		for (let index = 0; index < 8; index++)
 		{
 			document.getElementById("layer"+(index+1)+""+(repeat-1)+"").style.visibility="hidden";
 			console.log("drawlayer"+(index+1)+""+(repeat-1)+"");
 			document.getElementById("drawlayer"+(index+1)+""+(repeat-1)+"").style.visibility="hidden";
-		}		
-	}	
+		}
+	}
 }
 
 function checkInference()
@@ -407,4 +413,4 @@ function checkInference()
 		document.getElementById("infAns").innerHTML="With increase in printing speed, the molten material gets less time to solidify perfectly. This leads to less smoother surfaces and hence more surface roughness.";
 		$("#infAns").fadeIn(750);
 	},1500);
-}					
+}

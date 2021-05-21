@@ -48,7 +48,7 @@ var n;
   visibility: visible;
 }
 
- 
+
 </style>
 
 </head>
@@ -60,14 +60,14 @@ var n;
 <!--Title of Simulation		-->
 <div id="title"><h3 style="font-size:25px;">Effect of layer height on surface roughness</h3></div>
 
-<!--SubScreen Home	-->	
+<!--SubScreen Home	-->
 <div class="simsubscreen" id="canvas0">
 <h4 class="incanvas" style="font-family:verdana; ">Objective:</h4>
 <p class="incanvas" style="font-family:verdana; font-size:15px;">To determine the effect of layer height on surface roughness.</p></br>
 <h4 class="incanvas" style="font-family:verdana; ">Apparatus used:</h4>
 <p class="incanvas" style="font-family:verdana; font-size:14px;">3D printer, Surface roughness tester etc.</p>
 &nbsp;<span class="tooltip" style="border-bottom:1px dotted ; color:red; position:absolute; top:130px;"><strong>Description</strong>
-<span  class="tooltiptext" style="text-align:justify;"><strong style="color:red;">Surface roughness</strong> is measured as R<sub>a</sub> or average surface roughness. The R<sub>a</sub> value indicates the average surface roughness for the length of the measurement performed, i.e., 
+<span  class="tooltiptext" style="text-align:justify;"><strong style="color:red;">Surface roughness</strong> is measured as R<sub>a</sub> or average surface roughness. The R<sub>a</sub> value indicates the average surface roughness for the length of the measurement performed, i.e.,
   the average difference between peaks and valleys.<br><br><strong style="color:red;">Layer height</strong> is the height of individual layers that make up the specimen.</span></span>
 <img id=""      style="position: absolute; left: 170px; top: 305px; height:200px;width:300px;" title="Roughness tester" src="Images/base.png"/>
 <img id=""  style="position: absolute; left: 205px; top: 405px; height:40px;width:125px;" title="Roughness tester" src="Images/probe.png"/>
@@ -77,24 +77,24 @@ var n;
 
 </div>
 
-<!--Step1	-->	
+<!--Step1	-->
 <div class="simsubscreen" id="canvas1" style="visibility:hidden">
 <strong id="titlestep" class="incanvas">STEP </strong>
 <span class="circlebg" id="stepnumber">&nbsp;1&nbsp;</span>
 <p id="pumptext" class="steptext" style="font-family:verdana; font-size:14px;">Select material and note the layer height value</p>
 <div id = "step-1" style="position:absolute;top:100px; left:60px; font-family:verdana; font-size:14px;">
-<p>Select a material:
+<p id="select">Select a material:
   <input type="radio" name="d"  value="1">&nbsp;PLA
   <input type="radio" name="d"  value="0">&nbsp;ABS
   <input id="done" type="submit" name="done" value="Done!"  /> </p>&nbsp;&nbsp;<br></div>
-
+<p id="can6-1" style="position:absolute;top: 100px; left:60px; font-family:verdana; font-size:14px; visibility: hidden;">Material = _____ </p>
 <p id="can6-2" style="position:absolute;top: 140px; left:60px; font-family:verdana; font-size:14px;">Layer height =  _____ mm</p>
 <p id="lh" style="position:absolute; visibility: hidden; top: 140px; left:60px; font-family:verdana; font-size:14px;"></p>
 <p id="can6-3" style="position:absolute;top: 180px; left:60px; font-family:verdana; font-size:14px;">Infill density = _____ %</p>
 <p id="can6-4" style="position:absolute;top: 220px; left:60px; font-family:verdana; font-size:14px;">Printing speed = _____ mm/s</p>
 </div>
 
-<!--Step2	-->	
+<!--Step2	-->
 
 <div class="simsubscreen" id="canvas2" style="visibility:hidden">
   <strong id="titlestep" class="incanvas">STEP </strong>
@@ -109,8 +109,8 @@ var n;
               <stop offset="100%" stop-color="black" />
             </radialGradient>
           </defs>
-        <path id = 'base' d="m15 272.5"></path> 
-        <path id = "layer0"  d="m25 272.5" style="stroke-linecap:round;"></path> 
+        <path id = 'base' d="m15 272.5"></path>
+        <path id = "layer0"  d="m25 272.5" style="stroke-linecap:round;"></path>
         <path id ="drawlayer1"  d="M25.75 111.75 h398.5 v-48.5 h-398.5 v48.5 l1.5 -1.5 h395.5 v-45.5 h-395.5 v45.5 l1.5 -1.5 h392.5 v-42.5 h-392.5 v42.5" ></path>
         <path id ="drawlayer2"  d="M25.75 111.75 h398.5 v-48.5 h-398.5 v48.5 l1.5 -1.5 h395.5 v-45.5 h-395.5 v45.5 l1.5 -1.5 h392.5 v-42.5 h-392.5 v42.5 v-42.5" ></path>
         <path d="M25.75 111.75 h398.5 v-48.5 h-398.5 v48.5 l1.5 -1.5 h395.5 v-45.5 h-395.5 v45.5 " ></path>
@@ -125,7 +125,7 @@ var n;
 
 </div>
 
-<!--Step3	-->	
+<!--Step3	-->
 <div class="simsubscreen" id="canvas3" style="visibility:hidden">
 <strong class="incanvas">STEP &nbsp;</strong><span class="circlebg">&nbsp;3&nbsp;</span>
 <p class="steptext" style="font-family:verdana; font-size:14px;">&nbsp;Measure the surface roughness </p>
@@ -142,7 +142,7 @@ var n;
 <p id="dispres" style="position:absolute;left:370px;visibility: hidden; top:290px; font-family:verdana; font-size:14px;"> </p>
 </div>
 
-<!--Step4	-->	
+<!--Step4	-->
 <div class="simsubscreen" id="canvas4" style="visibility:hidden">
   <strong class="incanvas" id="ob"><h3>Observations: </h3></strong>
   <table id="table" border=1 style="text-align:center; width:600px;">
@@ -177,7 +177,7 @@ var n;
   <td id="5-2" style="padding:10px;"></td>
   </tr>
   </table>
- 
+
   <div id="inferenceDiv" style="visibility:hidden; position:absolute; left:10px; top:290px;">
   <strong class="incanvas" id="ob" ><h3>Inference: </h3></strong>
   <div id="inference" style="background-color:grey; color:white; padding:7.5px; border-radius:5px;">
@@ -197,24 +197,24 @@ var n;
 
 
 <div id="questDiv" style="position:absolute; background-color:grey; color:white; padding:7.5px; border-radius:5px; visibility:hidden; text-align:justify;">
-<p id="q"></p><select id="answer" >	
+<p id="q"></p><select id="answer" >
 </select>
 <p id="a"></p>
 </div>
 
 
 <!--Trial text	-->
-<div id="">	
+<div id="">
 <p id="trial" style="text-transform: uppercase;visibility :hidden;font-weight: bold;font-family:verdana; "><strong>Trial = </strong></p>
 </div>
 
-	
-<!--next  Arrow	-->	
+
+<!--next  Arrow	-->
 <div id="nav">
 	<img id="nextButton" style="z-index: 10;" onclick="navNext(); " src="Images/Next.png" />
 </div>
 
-<!--Blinking Arrow	-->	
+<!--Blinking Arrow	-->
 <img class ="" id="arrow1" style="visibility:hidden" src="Images/arrow1.png"/>
 
 <div id="copyright"> &copy; 2020 SOLVE - The Virtual Lab @ NITK Surathkal, Department of Mechanical Engineering</div>

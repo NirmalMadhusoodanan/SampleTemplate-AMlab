@@ -50,15 +50,15 @@ for ( k = 0; k < 16; k=k+2) {
 
 function layer(v) {
     if (repeat==1) {
-        var t = 11.25;
-    } else if (repeat==2) {
         var t = 10;
+    } else if (repeat==2) {
+        var t = 9;
     } else if (repeat==3) {
-        var t = 8.75;
+        var t = 8;
     } else if (repeat==4) {
-        var t = 7.5;
+        var t = 7;
     } else if(repeat==5){
-        var t = 6.25;
+        var t = 6;
     } 
     console.log("t is",t); 
     console.log('layer is running');
@@ -100,15 +100,15 @@ function layer(v) {
 function imgmove(n)
 {
     if (repeat==1) {
-        var t = 11.25;
-    } else if (repeat==2) {
         var t = 10;
+    } else if (repeat==2) {
+        var t = 9;
     } else if (repeat==3) {
-        var t = 8.75;
+        var t = 8;
     } else if (repeat==4) {
-        var t = 7.5;
+        var t = 7;
     } else if(repeat==5){
-        var t = 6.25;
+        var t = 6;
     } 
     console.log("t is",t); 
     var lh =0.5;
@@ -175,15 +175,15 @@ function imgmove(n)
 
 function first(z) {
     if (repeat==1) {
-        var t = 11.25;
-    } else if (repeat==2) {
         var t = 10;
+    } else if (repeat==2) {
+        var t = 9;
     } else if (repeat==3) {
-        var t = 8.75;
+        var t = 8;
     } else if (repeat==4) {
-        var t = 7.5;
+        var t = 7;
     } else if(repeat==5){
-        var t = 6.25;
+        var t = 6;
     } 
     console.log("t is",t); 
     console.log('first is running');
@@ -254,19 +254,38 @@ function first(z) {
     {
     document.getElementById("notes").style.visibility="hidden";
     },(((t*3)-1)*1000));
+    setTimeout(function()
+    {
+    document.getElementById("notes").style="position:absolute; font-size:14px; background-color:grey; color:white; padding:7.5px; border-radius:5px; visibility:visible; left:40px; top:250px;"
+    document.getElementById("notes").innerHTML="The extruder nozzle deposits the material in each layer and moves up a distance equal to layer height.";
+    },(((t*3))*1000));
+    setTimeout(function()
+    {
+    document.getElementById("notes").style.visibility="hidden";
+    },(((t*3.75))*1000));
+
+    setTimeout(function()
+    {
+    document.getElementById("notes").style="position:absolute; font-size:14px; background-color:grey; color:white; padding:7.5px; border-radius:5px; visibility:visible; left:150px; top:250px;"
+    document.getElementById("notes").innerHTML="The deposited material bonds with the previous layer and solidifies.";
+    },(((t*3.75)+1)*1000));
+    setTimeout(function()
+    {
+    document.getElementById("notes").style.visibility="hidden";
+    },(((t*4.75))*1000));
    
 }
 function middle1(z,callback) {
     if (repeat==1) {
-        var t = 11.25;
-    } else if (repeat==2) {
         var t = 10;
+    } else if (repeat==2) {
+        var t = 9;
     } else if (repeat==3) {
-        var t = 8.75;
+        var t = 8;
     } else if (repeat==4) {
-        var t = 7.5;
+        var t = 7;
     } else if(repeat==5){
-        var t = 6.25;
+        var t = 6;
     } 
     console.log("t is",t); 
     console.log('middle1 is running');
@@ -297,15 +316,15 @@ function middle1(z,callback) {
 }
 function middle2(z) {
     if (repeat==1) {
-        var t = 11.25;
-    } else if (repeat==2) {
         var t = 10;
+    } else if (repeat==2) {
+        var t = 9;
     } else if (repeat==3) {
-        var t = 8.75;
+        var t = 8;
     } else if (repeat==4) {
-        var t = 7.5;
+        var t = 7;
     } else if(repeat==5){
-        var t = 6.25;
+        var t = 6;
     } 
     console.log("t is",t); 
     console.log('middle2 is running');
@@ -338,15 +357,15 @@ function middle2(z) {
 
 function last(z) {
     if (repeat==1) {
-        var t = 11.25;
-    } else if (repeat==2) {
         var t = 10;
+    } else if (repeat==2) {
+        var t = 9;
     } else if (repeat==3) {
-        var t = 8.75;
+        var t = 8;
     } else if (repeat==4) {
-        var t = 7.5;
+        var t = 7;
     } else if(repeat==5){
-        var t = 6.25;
+        var t = 6;
     } 
     console.log("t is",t); 
     console.log('last is running');
