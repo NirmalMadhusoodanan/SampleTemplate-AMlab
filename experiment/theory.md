@@ -11,7 +11,7 @@ FDM Process Schematic <br>
 <p style="text-indent:50px; text-align: justify">The materials used here are PLA (Poly Lactic Acid) and ABS (Acrylonitrile Butadiene Styrene). 3D printed ABS can be employed for end use applications due to its higher flexural strength and better elongation before breaking, whereas PLA is mostly used for rapid prototyping when form is more critical than function.</p>
 
 #### 2) Layer height
-<p style="text-indent:50px; text-align: justify">It is the height of individual layers. For a given component, more layer height means lesser number of layers will be required to build it. Usually it is around the range of 50 &#181m - 500 &#181m. Lesser layer heights are preferred for more adhesion between layers and strength. Layer height should not be more than the nozzle diameter.</p>
+<p style="text-indent:50px; text-align: justify">It is the height of individual layers. For a given component, more layer height means lesser number of layers will be required to build it. Usually it is around the range of 50 &#181m - 500 &#181m. Lesser layer heights are preferred for more adhesion between layers and strength. Layer height should not be more than the nozzle diameter. Sometimes, a layer can be misaligned with the layers above and below it, leading to a defect called z-wobble.</p>
 <p align="center">
   <img width="300" src="images/layer height.PNG"></img><br><br>
 Layer Height <br>
@@ -27,7 +27,7 @@ Infill Density in percentage <br>
 </p>
 
 #### 4) Print speed
-<p style="text-indent:50px; text-align: justify">The speed at which the extruder moves while depositing material. Increased speed can reduce the time required to print the specimen. But higher print speeds lead to defects like ghosting. Ghosting consists of small lines that repeat themselves on the surface of the specimen, caused by vibrations due to the inertia of the extruder when there are sudden direction changes at high speeds. At the same time, very low speeds can lead to the heated extruder to remain in the same region for more time leading to overheating of material and curling. The extruder head is usually at temperatures in the range of 200&deg;C-250&deg;C for PLA and ABS material.</p>
+<p style="text-indent:50px; text-align: justify">The speed at which the extruder moves while depositing material. Increased speed can reduce the time required to print the specimen. But higher print speeds lead to defects like ghosting. Ghosting consists of small lines that repeat themselves on the surface of the specimen, caused by vibrations due to the inertia of the extruder when there are sudden direction changes at high speeds. At the same time, very low speeds can lead to the heated extruder to remain in the same region for more time leading to overheating of material and curling, where the layers will collapse or sag due to high temperature. Low speeds can also lead to stringing, where some filament has dripped from the nozzle during passing through an open area. The extruder head is usually at temperatures in the range of 200&deg;C-250&deg;C for PLA and ABS material.</p>
 
 ### Effected Parameters:
 #### Surface roughness

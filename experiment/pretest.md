@@ -25,7 +25,7 @@ b. Always the build platform<br>
 d. None of the above<br>
 
 Q 5. The surface roughness value measured in this experiment is ____ <br>
-a. Difference between highest peak and lowest valley in measured length.<br>
-<b>b. Average difference between peaks and valleys in measured length.</b><br>
-c. Average height of peaks in measured length.<br>
-d. Average height of valleys in measured length.<br>
+a. Difference between highest peak and lowest valley.<br>
+<b>b. Average difference between peaks and valleys in measured length.<b><br>
+c. Average height of peaks.<br>
+d. Average height of valleys.<br>
