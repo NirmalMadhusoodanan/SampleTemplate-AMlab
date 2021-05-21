@@ -13,7 +13,7 @@
 <img src="images/ptlh-4.PNG"><br>
 <img src="images/ptlh-5.PNG"><br>
 
-4. Once is printing is completed, press the start/stop button of the stopwatch again to finish timing. Then NEXT button will appear on the bottom right corner. Press it to proceed.
+4. Once printing is completed, press the start/stop button of the stopwatch again to finish timing. Then NEXT button will appear on the bottom right corner. Press it to proceed.
 <img src="images/ptlh-6.PNG"><br>
 <img src="images/ptlh-7.PNG"><br>
 
@@ -53,7 +53,7 @@
 <img src="images/ptid-4.PNG"><br>
 <img src="images/ptid-5.PNG"><br>
 
-4. Once is printing is completed, press the start/stop button of the stopwatch again to finish timing. Then NEXT button will appear on the bottom right corner. Press it to proceed.
+4. Once printing is completed, press the start/stop button of the stopwatch again to finish timing. Then NEXT button will appear on the bottom right corner. Press it to proceed.
 <img src="images/ptid-6.PNG"><br>
 <img src="images/ptid-7.PNG"><br>
 
