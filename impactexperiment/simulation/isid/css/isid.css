@@ -130,7 +130,7 @@ svg
     height: 525px;   
     position: absolute;
     transform: translate(62.5px,17.5px);
-
+    /* border: red 1px solid; */
 }
 .svg2
 {

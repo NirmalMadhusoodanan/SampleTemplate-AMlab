@@ -41,11 +41,13 @@ function navNext()
  magic();
 }
 var ca;
-var questions=["For build orientations other than 0° <br>and 90°, printing will take more time due to",
+var questions=["Supports are required when ______ exists.",
+				"For build orientations other than 0° <br>and 90°, printing will take more time due to",
 				"Which among these is commonly used <br> support material in FDM?",
 				"The base plate will be kept</br> at a temperature(in °C) of "];
 
-var options2=[["Printing supports","Slow solidification","Slow feed rate"],//Printing supports
+var options2=[["Slant build orientations","Overhangs","Both of the above"],//Both of the above
+			  ["Printing supports","Slow solidification","Slow feed rate"],//Printing supports
 			  ["PVA","PLA","ABS"],//PVA
 			  ["100","60","30","10"]];//60
 
@@ -84,7 +86,7 @@ function validateAnswer(qn,ans,left,top)
 			setTimeout(function()
 			{
 				document.getElementById("questDiv").style.visibility="hidden";
-				if (repeat==2 || repeat==3 || repeat==4) {
+				if (repeat==1 || repeat==2 || repeat==3 || repeat==4) {
 					document.getElementById('nextButton').style.visibility="visible";
 				}
 			},1500);
@@ -134,6 +136,10 @@ function magic()
 		    document.getElementById('trial').style="visibility:visible;left: 700px; top: 100px;position: absolute;font-weight: bold;text-transform: uppercase;";
 		    document.getElementById('trial').innerHTML="Trial : " + repeat;
 		    document.getElementById("done").style.visibility= "hidden";
+			document.getElementById("select").style.visibility= "hidden";
+			if($("input[name='d']:checked").val()==0){	document.getElementById('can6-1').innerHTML="Material = ABS";		}
+			if($("input[name='d']:checked").val()==1){	document.getElementById('can6-1').innerHTML="Material = PLA";		}	
+			document.getElementById('can6-1').style.visibility="visible";
 		    document.getElementById('nextButton').style.visibility="visible";
 		}
 	    else{
@@ -262,7 +268,6 @@ function magic()
 			document.getElementById("form").style.visibility="hidden";
 			if($("input[name='d']:checked").val()==0){	document.getElementById('output').value = impactvalues[repeat-1][2];		}
 			if($("input[name='d']:checked").val()==1){	document.getElementById('output').value = impactvalues[repeat-1][1];;		}
-			document.getElementById("output").value =  impactvalues[repeat-1][1];
 			document.getElementById("nextButton").style.visibility="visible";
 		}
 		if(repeat < 4 && repeat>0)
@@ -347,22 +352,28 @@ function step4()
 	},8750);
 	setTimeout(function()
 			{
-	if (repeat==2) {
+	if (repeat==1) {
 		setTimeout(function()
-			{
-				validateAnswer(0,0,"50px","200px");
-			},500);
+		{
+			validateAnswer(0,2,"50px","200px");
+		},500);
 	}
-	else if (repeat==3) {
+	else if (repeat==2) {
 		setTimeout(function()
 		{
 			validateAnswer(1,0,"50px","200px");
 		},500);
 	}
+	else if (repeat==3) {
+		setTimeout(function()
+		{
+			validateAnswer(2,0,"50px","200px");
+		},500);
+	}
 	else if (repeat==4){
 		setTimeout(function()
 		{
-			validateAnswer(2,1,"50px","200px");
+			validateAnswer(3,1,"50px","200px");
 		},500);
 	}
 	else {
@@ -386,6 +397,7 @@ function refresh1()
   document.getElementById('drawlayer2').style.animation = "";
 	document.getElementById('drawlayer5').style.animation = "";
 	document.getElementById('sr1').style.visibility="hidden";
+	document.getElementById('can6-1').style.visibility="hidden";
 	document.getElementById('i4-4').style.visibility="hidden";
 	document.getElementById('i4-7').style.visibility="hidden";
 	document.getElementById('i4-54').style.visibility="hidden";

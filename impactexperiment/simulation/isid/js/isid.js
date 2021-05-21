@@ -22,7 +22,7 @@ p7="";
 var i=0;
 var x1=1.5;
 var x2=0.75;
-var t = 10;
+var t = 6;
 var z,sw,v;
 var svg= document.getElementById('specimen');
 var svgNS = "http://www.w3.org/2000/svg";	
@@ -169,6 +169,10 @@ function magic()
 		document.getElementById('trial').style="visibility:visible;left: 700px; top: 100px;position: absolute;font-weight: bold;text-transform: uppercase;";
 		document.getElementById('trial').innerHTML="Trial : " + repeat;
 		document.getElementById("done").style.visibility= "hidden";
+		document.getElementById("select").style.visibility= "hidden";
+		if($("input[name='d']:checked").val()==0){	document.getElementById('can6-1').innerHTML="Material = ABS";		}
+		if($("input[name='d']:checked").val()==1){	document.getElementById('can6-1').innerHTML="Material = PLA";		}	
+		document.getElementById('can6-1').style.visibility="visible";
 		document.getElementById('nextButton').style.visibility="visible";		 
 		}
 	else{
@@ -333,7 +337,6 @@ function magic()
 			document.getElementById("form").style.visibility="hidden";
 			if($("input[name='d']:checked").val()==0){	document.getElementById('output').value = impactvalues[repeat-1][2];		}
 			if($("input[name='d']:checked").val()==1){	document.getElementById('output').value = impactvalues[repeat-1][1];;		}
-			document.getElementById("output").value =  impactvalues[repeat-1][1];
 			document.getElementById("nextButton").style.visibility="visible";
 		}
 		if(repeat < 5 && repeat>0)
@@ -465,6 +468,7 @@ function refresh1()
 	document.getElementById('drawlayer6').style.strokeDasharray = 0;
 	document.getElementById('drawlayer6').style.strokeDashoffset = 0;
 	document.getElementById('note').style.visibility="hidden";
+	document.getElementById('can6-1').style.visibility="hidden";
     document.getElementById('sr1').style.visibility="hidden";
 	document.getElementById('i4-4').style.visibility="hidden";
 	document.getElementById('i4-7').style.visibility="hidden";
