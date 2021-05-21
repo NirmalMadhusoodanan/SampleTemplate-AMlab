@@ -7,7 +7,7 @@ p6="";
 var i=0;
 var x1=1.5;
 var x2=0.75;
-var t = 7.5;
+var t = 6;
 var z,sw,v,n;
 var impactvalues = [[0.5,9.26,5.99],[0.4,10.99,7.73],[0.3,12.73,9.47],[0.2,14.47,11.21],[0.1,16.21,12.95]]
 
@@ -218,16 +218,44 @@ function first(z) {
     {
     document.getElementById("notes").style.visibility="hidden";
     },(t*2*1000));
-
     setTimeout(function()
     {
     document.getElementById("notes").style="position:absolute; font-size:14px; background-color:grey; color:white; padding:7.5px; border-radius:5px; visibility:visible; left:150px; top:250px;"
     document.getElementById("notes").innerHTML="For the inner layers, the infill is determined by the infill density value.";
-    },(((t*2)+1)*1000));
+    },(((t*2)+3)*1000));
     setTimeout(function()
     {
     document.getElementById("notes").style.visibility="hidden";
-    },(((t*3)-1)*1000));
+    },(((t*3)+2)*1000));
+    setTimeout(function()
+    {
+    document.getElementById("notes").style="position:absolute; font-size:14px; background-color:grey; color:white; padding:7.5px; border-radius:5px; visibility:visible; left:30px; top:250px;"
+    document.getElementById("notes").innerHTML="The extruder nozzle deposits the material in each layer and moves up a distance equal to layer height.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The deposited material bonds with the previous layer and solidifies.";
+    },(((t*3)+7)*1000));
+    setTimeout(function()
+    {
+    document.getElementById("notes").style.visibility="hidden";
+    },(((t*3)+13)*1000));
+
+    setTimeout(function()
+    {
+    document.getElementById("notes").style="position:absolute; font-size:14px; background-color:grey; color:white; padding:7.5px; border-radius:5px; visibility:visible; left:150px; top:250px;"
+    if($("input[name='d']:checked").val()==0){	document.getElementById('notes').innerHTML="For ABS, the extruder is kept at a temperature of around 200–250°C";		}
+    if($("input[name='d']:checked").val()==1){	document.getElementById('notes').innerHTML="For PLA, the extruder is kept at a temperature of around 180–220°C";		}	
+    },(((t*3)+18)*1000));
+    setTimeout(function()
+    {
+    document.getElementById("notes").style.visibility="hidden";
+    },(((t*3)+23)*1000));
+    setTimeout(function()
+    {
+    document.getElementById("notes").style="position:absolute; font-size:14px; background-color:grey; color:white; padding:7.5px; border-radius:5px; visibility:visible; left:150px; top:250px;"
+    document.getElementById("notes").innerHTML="The layer height should not be more than the nozzle diameter.";
+    },(((t*3)+26)*1000));
+    setTimeout(function()
+    {
+    document.getElementById("notes").style.visibility="hidden";
+    },(((t*3)+30)*1000));
 
 }
 function middle1(z,callback) {

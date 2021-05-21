@@ -137,6 +137,11 @@ function magic()
 		    document.getElementById('trial').style="visibility:visible;left: 700px; top: 100px;position: absolute;font-weight: bold;text-transform: uppercase;";
 		    document.getElementById('trial').innerHTML="Trial : " + repeat;
 		    document.getElementById("done").style.visibility= "hidden";
+			document.getElementById("select").style.visibility= "hidden";
+			if($("input[name='d']:checked").val()==0){	document.getElementById('can6-1').innerHTML="Material = ABS";		}
+			if($("input[name='d']:checked").val()==1){	document.getElementById('can6-1').innerHTML="Material = PLA";		}	
+			document.getElementById('can6-1').style.visibility="visible";
+			console.log(document.getElementById('can6-1'));
 		    document.getElementById('nextButton').style.visibility="visible";
 		}
 	    else{
@@ -267,7 +272,6 @@ function magic()
 			document.getElementById("form").style.visibility="hidden";
 			if($("input[name='d']:checked").val()==0){	document.getElementById('output').value = impactvalues[repeat-1][2];		}
 			if($("input[name='d']:checked").val()==1){	document.getElementById('output').value = impactvalues[repeat-1][1];;		}
-			document.getElementById("output").value =  impactvalues[repeat-1][1];
 			document.getElementById("nextButton").style.visibility="visible";
 		}
 		if(repeat < 2 && repeat>0)
@@ -389,6 +393,7 @@ function refresh1()
     document.getElementById('drawlayer1').style.animation = "";
     document.getElementById('drawlayer2').style.animation = "";
 	document.getElementById('sr1').style.visibility="hidden";
+	document.getElementById('can6-1').style.visibility="hidden";
 	document.getElementById('i4-4').style.visibility="hidden";
 	document.getElementById('i4-7').style.visibility="hidden";
 	document.getElementById('i4-54').style.visibility="hidden";
