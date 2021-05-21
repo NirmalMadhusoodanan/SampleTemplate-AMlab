@@ -1,7 +1,7 @@
 ### Selective Laser Melting (SLM) process<br>
 <p style="text-indent:50px; text-align: justify">It is a 3D printing process which uses a high power-density laser to melt and fuse metallic powders together. A controlled amount of powder from the material feeding platform is swept into the building platform by a roller or sweeper tool. This area is levelled by the same spreading mechanism to compact the powder and homogenize the surface (powder bed). Then, a high‐power laser generates a beam that scans a given area, which corresponds to a cross‐sectional surface of the sliced CAD model of the specimen. The laser beam heats the irradiated zone enough to melt the particles of the material and to obtain a solid two‐dimensional part. Then the material platform moves up while the building platform moves down, and a new layer of powder is deposited in the building platform by the spreading mechanism and the process continues.</p>
 <p align="center">
-  <img width="800" src="images/SLMschematic.jpg"></img><br><br>
+  <img width="300" src="images/SLMschematic.jpg"></img><br><br>
 SLM Process Schematic <br>
 ( Source: https://all3dp.com/2/selective-laser-melting-slm-3d-printing-simply-explained/)
 </p>
@@ -39,8 +39,8 @@ SLM porocess parameters <br>
 Part Geometry <br>
 </p> 
 
-#### 3) Hatch spacing
-<p style="text-indent:50px; text-align: justify">It is the distance between two parallel adjacent laser passes. Here, it is fixed as slightly greater than laser spot diameter.</p>
+#### 3) Hatch spacing and hatch angle
+<p style="text-indent:50px; text-align: justify">hatch spacing is the distance between two parallel adjacent laser passes. Here, it is fixed as slightly greater than laser spot diameter. Hatch angle is the angle between hatch lines in adjacent layers. Hereit is fixed as 45°</p>
 
 #### 4) Scanning strategy
 <p style="text-indent:50px; text-align: justify">It denotes the angle at which adjacent layers are printed. It is the orientation of each layer with respect to previous layer. Here, this angle is fixed at 0°/90°.</p>

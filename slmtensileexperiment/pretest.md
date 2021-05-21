@@ -8,7 +8,7 @@ b. Increase surface roughness<br>
 <b>c. Increase adhesion</b><br>
 d. None of the above<br><br>
 
-Q 2. What kind of specific mirrors are used to point the laser with high accuracy accross the surface of the specimen? <br>
+Q 2. What kind of specific mirrors are used to point the laser with high accuracy across the surface of the specimen? <br>
 <b>a. Galvanometric mirrors</b><br>
 b. Convex mirrors<br>
 c. Concave mirrors<br>

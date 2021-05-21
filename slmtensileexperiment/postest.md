@@ -23,7 +23,7 @@ b. More layer height, more laser power, less scanning speed, 90° build orientat
 <b>c. Less layer height, more laser power, less scanning speed, 0° build orientation</b><br>
 d. Less layer height, less laser power, more scanning speed, 0° build orientation<br>
 
-Q 5. UTS is less for specimen built at 90° build orientation becuase ______<br>
+Q 5. UTS is less for specimen built at 90° build orientation because ______<br>
 a. Load acts in parallel direction to fibers.<br>
 <b>b. Load acts in perpendicular direction to fibers.</b><br>
 c. Load acts at an angle of 45° with respect to fibers.<br>
