@@ -89,7 +89,7 @@
 3. Note the build orientation value and then click on NEXT Button at the bottom right corner to proceed. <br>
 <img src="images/isbo-4.PNG"><br>
 
-4. Click on the extruder head to start printing. Printing will be completed layer by layer. After printing is done, click NEXT Button.
+4. Click on the extruder head to start printing. Printing will be completed layer by layer. Notice the amount of material in the infill. After printing is done, click NEXT Button.
 <img src="images/isbo-5.PNG"><br>
 <img src="images/isbo-6.PNG"><br>
 
@@ -127,7 +127,7 @@
 3. Note the raster angle value and then click on NEXT Button at the bottom right corner to proceed. <br>
 <img src="images/isra-4.PNG"><br>
 
-4. Click on the extruder head to start printing. Printing will be completed layer by layer. After printing is done, click NEXT Button.
+4. Click on the extruder head to start printing. Printing will be completed layer by layer. Notice the raster angle. After printing is done, click NEXT Button.
 <img src="images/isra-5.PNG"><br>
 <img src="images/isra-6.PNG"><br>
 
