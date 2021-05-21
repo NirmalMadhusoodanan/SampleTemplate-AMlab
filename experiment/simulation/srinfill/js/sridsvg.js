@@ -9,7 +9,7 @@ var x1=1.5;
 var x2=0.75;
 var i=0;
 var h=0;
-var t = 15;
+var t = 7.5;
 var z1 = 0;
 var z2=0;
 var z,sw,v,n;
@@ -47,7 +47,6 @@ for ( k = 0; k < 16; k=k+2) {
     } else {
         p3 += "v-2.75l"+(-(41.75-k*2.75))+" "+(-(41.75-k*2.75))+" ";
         p6 += "v2.75l"+(-(41.75-k*2.75))+" "+(41.75-k*2.75)+" ";
-        
     }
 }
 
@@ -234,6 +233,25 @@ function first(z) {
     {
     document.getElementById("notes").style.visibility="hidden";
     },(((t*3)-1)*1000));
+    setTimeout(function()
+    {
+    document.getElementById("notes").style="position:absolute; font-size:14px; background-color:grey; color:white; padding:7.5px; border-radius:5px; visibility:visible; left:40px; top:250px;"
+    document.getElementById("notes").innerHTML="The extruder nozzle deposits the material in each layer and moves up a distance equal to layer height.";
+    },(((t*3))*1000));
+    setTimeout(function()
+    {
+    document.getElementById("notes").style.visibility="hidden";
+    },(((t*3.75))*1000));
+
+    setTimeout(function()
+    {
+    document.getElementById("notes").style="position:absolute; font-size:14px; background-color:grey; color:white; padding:7.5px; border-radius:5px; visibility:visible; left:150px; top:250px;"
+    document.getElementById("notes").innerHTML="The deposited material bonds with the previous layer and solidifies.";
+    },(((t*3.75)+1)*1000));
+    setTimeout(function()
+    {
+    document.getElementById("notes").style.visibility="hidden";
+    },(((t*4.75))*1000));
    
  }
 function middle1(z,callback,t2) {
