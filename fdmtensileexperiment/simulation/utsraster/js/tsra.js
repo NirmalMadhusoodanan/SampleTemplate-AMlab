@@ -24,7 +24,7 @@ p7="";
 var i=0;
 var x1=1.5;
 var x2=0.75;
-var t = 7.5;
+var t = 6;
 var z,sw,v;
 var svg= document.getElementById('specimen');
 var svgNS = "http://www.w3.org/2000/svg";
@@ -241,6 +241,10 @@ function magic()
 		    document.getElementById('trial').style="visibility:visible;left: 700px; top: 100px;position: absolute;font-weight: bold;text-transform: uppercase;";
 		    document.getElementById('trial').innerHTML="Trial : " + repeat;
 		    document.getElementById("done").style.visibility= "hidden";
+		document.getElementById("select").style.visibility= "hidden";
+		if($("input[name='d']:checked").val()==0){	document.getElementById('can6-1').innerHTML="Material = ABS";		}
+		if($("input[name='d']:checked").val()==1){	document.getElementById('can6-1').innerHTML="Material = PLA";		}
+		document.getElementById('can6-1').style.visibility="visible";
 		    document.getElementById('nextButton').style.visibility="visible";
 		}
         else if(flag==1 && repeat ==3)
@@ -258,6 +262,10 @@ function magic()
 		    document.getElementById('trial').style="visibility:visible;left: 700px; top: 100px;position: absolute;font-weight: bold;text-transform: uppercase;";
 		    document.getElementById('trial').innerHTML="Trial : " + repeat;
 		    document.getElementById("done").style.visibility= "hidden";
+			document.getElementById("select").style.visibility= "hidden";
+			if($("input[name='d']:checked").val()==0){	document.getElementById('can6-1').innerHTML="Material = ABS";		}
+			if($("input[name='d']:checked").val()==1){	document.getElementById('can6-1').innerHTML="Material = PLA";		}
+			document.getElementById('can6-1').style.visibility="visible";
 		    document.getElementById('nextButton').style.visibility="visible";
 		}
 	    else{
@@ -490,6 +498,7 @@ function refresh1()
 	document.getElementById('can61a').style.visibility="hidden";
 	document.getElementById('can65').style.visibility="hidden";
 	document.getElementById('can61').style.visibility="hidden";
+	document.getElementById('can6-1').style.visibility="hidden";
 	document.getElementById('green').style.visibility="hidden";
 	document.getElementById('41').style.visibility="hidden"
 	document.getElementById('42').style.visibility="hidden"
