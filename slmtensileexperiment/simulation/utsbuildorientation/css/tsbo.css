@@ -123,7 +123,13 @@ background:#000
     overflow: hidden;
     border: black 1px solid;
 }
-
+.step3{
+    position: relative;
+    top:-80px;
+    left:-50px; 
+    width: 800px; 
+    height: 560px; 
+}
 svg
 {
     width: 800px;

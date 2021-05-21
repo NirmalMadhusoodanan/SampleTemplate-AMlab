@@ -51,8 +51,8 @@ function roller(n){
         var t_roller = 4;
         var t_roller_delay = 2.5;
     }else {
-        var t_roller = 2.5;
-        var t_roller_delay = 1;
+        var t_roller = 2;
+        var t_roller_delay = 0.5;
     }
     document.getElementById('baseroller'+(10-(n))+''+(repeat)+'').style.visibility="visible";
     if (n==0) {
@@ -166,6 +166,16 @@ function roller(n){
         {
             document.getElementById("notes").style.visibility="hidden";
         },(2*t_roller_delay+t_roller+t)*1000);
+        
+        setTimeout(function()
+        {
+            document.getElementById("notes").style="position:absolute; font-size:14px; background-color:grey; color:white; padding:7.5px; border-radius:5px; visibility:visible; left:60px; top:250px;"
+            document.getElementById("notes").innerHTML="The laser melts the new layer which bonds with the previous layer and then solidifies.";
+        },(3*t_roller_delay+t_roller+t)*1000);
+        setTimeout(function()
+        {
+            document.getElementById("notes").style.visibility="hidden";
+        },(5*t_roller_delay+t_roller+t)*1000);
     
     }
     document.getElementById(id10).addEventListener("animationstart",()=>{
@@ -578,8 +588,8 @@ function materialtopview(n) {
         var t_roller = 4;
         var t_roller_delay = 2.5;
     }else {
-        var t_roller = 2.5;
-        var t_roller_delay = 1;
+        var t_roller = 2;
+        var t_roller_delay = 0.5;
     }
    //console,log('materialtopview is running');
     var id11 = "materiallayertopview"+(n+1)+""+(repeat)+"";
@@ -890,6 +900,7 @@ function last2(z) {
             document.getElementById('img0').style.visibility = "hidden";
             document.getElementById('roller').style.visibility = "hidden";
         	document.getElementById('nextButton').style.visibility="visible";
+            document.getElementById('step-2').setAttribute('class','step3');
         	})
 }
 

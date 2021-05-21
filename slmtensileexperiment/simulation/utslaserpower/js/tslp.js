@@ -20,7 +20,7 @@ p7="";
 var i=0;
 var x1=1.5;
 var x2=0.75;
-var t = 7.5;
+var t = 6;
 var z,sw,v;
 var svg= document.getElementById('specimen');
 var svgNS = "http://www.w3.org/2000/svg";
@@ -237,6 +237,7 @@ function magic()
         document.getElementById('can6-5').innerHTML="Build orientation = "+0+"°";
 		document.getElementById('trial').style="visibility:visible;left: 700px; top: 100px;position: absolute;font-weight: bold;text-transform: uppercase;";
 		document.getElementById('trial').innerHTML="Trial : " + repeat;
+		document.getElementById('specimennotch1').style.visibility="visible";
 		document.getElementById('nextButton').style.visibility="visible";
 		}
 	else{
@@ -250,6 +251,7 @@ function magic()
         document.getElementById('can6-5').innerHTML="Build orientation = "+0+"°";
 		document.getElementById('trial').style="visibility:visible;left: 700px; top: 100px;position: absolute;font-weight: bold;text-transform: uppercase;";
 		document.getElementById('trial').innerHTML="Trial : " + repeat;
+		document.getElementById('specimennotch1').style.visibility="visible";
 		document.getElementById('nextButton').style.visibility="visible";
 	}
 }
@@ -319,7 +321,7 @@ function magic()
 		document.getElementById('42').style.visibility="visible";
 		document.getElementById('form').style.visibility="visible";
 		document.getElementById('check').style.visibility="visible";
-		document.getElementById('specimennotch').style.visibility="visible";
+		document.getElementById('specimennotch2').style.visibility="visible";
 		document.getElementById('41').innerHTML="Load at failure of specimen = "+tensileloadvalues[repeat-1][0]+" N";
 		document.getElementById("check").onclick=function()
 		{
@@ -424,7 +426,8 @@ function refresh1()
 	document.getElementById('42').style.visibility="hidden"
 	document.getElementById('form').style.visibility="hidden";
 	document.getElementById('check').style.visibility="hidden";
-	document.getElementById('specimennotch').style.visibility="hidden";
+	document.getElementById('specimennotch1').style.visibility="hidden";
+	document.getElementById('specimennotch2').style.visibility="hidden";
 	document.getElementById('can63d').style.visibility="hidden";
 	document.getElementById('can61d').style.visibility="hidden";
 	document.getElementById('can62').style.visibility="hidden";
