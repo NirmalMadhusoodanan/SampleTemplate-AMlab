@@ -44,7 +44,7 @@
 
 #### Effect of infill density on ultimate tensile strength:
 
-1. When you open effect of infill density on ultimate tensile strength experiment, a window will open as shown. After reading the objective and apparatus required,  move mouse pointer over the description to read and recall the basic terms. Then click the NEXT button on the bottom right corner. <br>
+1. When you open effect of infill density on ultimate tensile strength experiment, a window will open as shown. After reading the objective and apparatus required, move mouse pointer over the description to read and recall the basic terms. Then click the NEXT button on the bottom right corner. <br>
 <img src="images/tsid-1.PNG"><br>
 <img src="images/tsid-2.PNG"><br>
 
@@ -84,7 +84,7 @@
 <img src="images/tsid-16.PNG"><br>
 <img src="images/tsid-17.PNG"><br>
 
-11. Repeat the same steps in further trials to get values of ultimate tensile strength for different values of infill density. Notice the relation.<br>
+12. Repeat the same steps in further trials to get values of ultimate tensile strength for different values of infill density. Notice the relation.<br>
 <img src="images/tsid-18.PNG"><br>
 
 #### Effect of build orientation on ultimate tensile strength.:

@@ -26,5 +26,5 @@ d. Less layer height, less infill density, flat build orientation<br>
 Q 5. For the same value of parameters, which material results in more ultimate tensile strength? <br>
 a. ABS<br>
 <b>b. PLA</b><br>
-c. Both a nd b<br>
+c. Both a and b<br>
 d. None of these<br>
