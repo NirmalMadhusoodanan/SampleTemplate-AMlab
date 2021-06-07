@@ -1,6 +1,6 @@
 ## Post test
 <br>
-Q 1. Surface roughness of 3D printed specimen ________ with increase in cutting speed. <br>
+Q 1. Surface roughness of laser cut specimen ________ with increase in cutting speed. <br>
 <b>a.Increases.</b><br>
 b. Decreases<br>
 c. Stays the same<br>
