@@ -80,7 +80,7 @@
 
   const myQuestions = [
     {
-      question: "Surface roughness of 3D printed specimen ________ with increase in cutting speed.",
+      question: "Surface roughness of laser cut specimen ________ with increase in cutting speed.",
       answers: {
         a: "Increases",
         b: "Decreases",
