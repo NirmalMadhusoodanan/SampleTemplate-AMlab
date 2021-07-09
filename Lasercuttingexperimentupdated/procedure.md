@@ -9,11 +9,11 @@
 2. Note the laser power value and then click on NEXT Button at the bottom right corner to proceed. <br>
 <img src="images/srlp-3.png"><br>
 
-3. Click on the door handle of the laser cutting machine to open it. Click on the sheet to insert it to the machine.
+3. Click on the door handle of the laser cutting machine to open it. Click on the sheet to insert it to the machine.<br>
 <img src="images/srlp-4.png"><br>
 <img src="images/srlp-5.png"><br>
 
-4. Click on the door handle of the laser cutting machine again to close it. Click Next button.
+4. Click on the door handle of the laser cutting machine again to close it. Click Next button.<br>
 <img src="images/srlp-6.png"><br>
 <img src="images/srlp-7.png"><br>
 
@@ -26,16 +26,16 @@
 7. After entering the values, click Submit dimensions button. <br>
 <img src="images/srlp-10.png"><br>
 
-8. Then click on Origin button to bring the nozzle to starting point of cut.
+8. Then click on Origin button to bring the nozzle to starting point of cut.<br>
 <img src="images/srlp-10-1.png"><br>
 
-9. After that click Frame button to see the nozzle traverse the border of the cut area.
+9. After that click Frame button to see the nozzle traverse the border of the cut area.<br>
 <img src="images/srlp-10-2.png"><br>
 
-10. Then click Start-Pause button to start the cutting process. The button can be pressed again to pause and resume the cutting process at any time.
+10. Then click Start-Pause button to start the cutting process. The button can be pressed again to pause and resume the cutting process at any time.<br>
 <img src="images/srlp-10-3.png"><br>
 
-11. At any point during cutting, the emergency stop can be pressed to stop the process and reset the system using Reset button.
+11. At any point during cutting, the emergency stop can be pressed to stop the process and reset the system using Reset button.<br>
 <img src="images/srlp-10-4.png"><br>
 
 12. After cutting is finished, click NEXT button.<br>
@@ -50,7 +50,7 @@
 15. After measuring, the value of roughness will be displayed in the device. Click NEXT button.<br>
 <img src="images/srlp-14.png"><br>
 
-16. Note the new laser power value and click NEXT button. Notice thickness of laser beam corresponding to power.
+16. Note the new laser power value and click NEXT button. Notice thickness of laser beam corresponding to power.<br>
 <img src="images/srlp-15.png"><br>
 
 17. Repeat the previous steps in further trials to get values of surface roughness for different values of laser power. Notice the relation.<br>
@@ -66,11 +66,11 @@
 2. Note the assist gas pressure value and then click on NEXT Button at the bottom right corner to proceed. <br>
 <img src="images/srgp-3.png"><br>
 
-3. Click on the door handle of the laser cutting machine to open it. Click on the sheet to insert it to the machine.
+3. Click on the door handle of the laser cutting machine to open it. Click on the sheet to insert it to the machine.<br>
 <img src="images/srgp-4.png"><br>
 <img src="images/srgp-5.png"><br>
 
-4. Click on the door handle of the laser cutting machine again to close it. Click Next button.
+4. Click on the door handle of the laser cutting machine again to close it. Click Next button.<br>
 <img src="images/srgp-6.png"><br>
 <img src="images/srgp-7.png"><br>
 
@@ -83,16 +83,16 @@
 7. After entering the values, click Submit dimensions button. <br>
 <img src="images/srgp-10.png"><br>
 
-8. Then click on Origin button to bring the nozzle to starting point of cut.
+8. Then click on Origin button to bring the nozzle to starting point of cut.<br>
 <img src="images/srgp-10-1.png"><br>
 
-9. After that click Frame button to see the nozzle traverse the border of the cut area.
+9. After that click Frame button to see the nozzle traverse the border of the cut area.<br>
 <img src="images/srgp-10-2.png"><br>
 
-10. Then click Start-Pause button to start the cutting process. The button can be pressed again to pause and resume the cutting process at any time.
+10. Then click Start-Pause button to start the cutting process. The button can be pressed again to pause and resume the cutting process at any time.<br>
 <img src="images/srgp-10-3.png"><br>
 
-11. At any point during cutting, the emergency stop can be pressed to stop the process and reset the system using Reset button.
+11. At any point during cutting, the emergency stop can be pressed to stop the process and reset the system using Reset button.<br>
 <img src="images/srgp-10-4.png"><br>
 
 12. After cutting is finished, click NEXT button.<br>
@@ -107,7 +107,7 @@
 15. After measuring, the value of roughness will be displayed in the device. Click NEXT button.<br>
 <img src="images/srgp-14.png"><br>
 
-16. Note the new assist gas pressure value and click NEXT button.
+16. Note the new assist gas pressure value and click NEXT button.<br>
 <img src="images/srgp-15.png"><br>
 
 17. Repeat the previous steps in further trials to get values of surface roughness for different values of assist gas pressure. Notice the relation.<br>
@@ -123,11 +123,11 @@
 2. Note the cutting speed value and then click on NEXT Button at the bottom right corner to proceed. <br>
 <img src="images/srcs-3.png"><br>
 
-3. Click on the door handle of the laser cutting machine to open it. Click on the sheet to insert it to the machine.
+3. Click on the door handle of the laser cutting machine to open it. Click on the sheet to insert it to the machine.<br>
 <img src="images/srcs-4.png"><br>
 <img src="images/srcs-5.png"><br>
 
-4. Click on the door handle of the laser cutting machine again to close it. Click Next button.
+4. Click on the door handle of the laser cutting machine again to close it. Click Next button.<br>
 <img src="images/srcs-6.png"><br>
 <img src="images/srcs-7.png"><br>
 
@@ -137,26 +137,26 @@
 6. Now, enter the dimensions in the range shown in the space provided.<br>
 <img src="images/srcs-9.png"><br>
 
-7. After entering the values, click Submit dimensions button.
+7. After entering the values, click Submit dimensions button.<br>
 <img src="images/srcs-10.png"><br>
 
-8. Click on the Speed button to show the speed in the display. 
+8. Click on the Speed button to show the speed in the display. <br>
 <img src="images/srcs-10-1.png"><br>
 
-9. Then click on up arrow to set required speed. Then click Enter buton.
+9. Then click on up arrow to set required speed. Then click Enter button.<br>
 <img src="images/srcs-10-2.png"><br>
 <img src="images/srcs-10-3.png"><br>
 
-10. Then click on Origin button to bring the nozzle to starting point of cut.
+10. Then click on Origin button to bring the nozzle to starting point of cut.<br>
 <img src="images/srcs-10-4.png"><br>
 
-11. After that click Frame button to see the nozzle traverse the border of the cut area.
+11. After that click Frame button to see the nozzle traverse the border of the cut area.<br>
 <img src="images/srcs-10-5.png"><br>
 
-12. Then click Start-Pause button to start the cutting process. The button can be pressed again to pause and resume the cutting process at any time.
+12. Then click Start-Pause button to start the cutting process. The button can be pressed again to pause and resume the cutting process at any time.<br>
 <img src="images/srcs-10-6.png"><br>
 
-13. At any point during cutting, the emergency stop can be pressed to stop the process and reset the system using Reset button.
+13. At any point during cutting, the emergency stop can be pressed to stop the process and reset the system using Reset button.<br>
 <img src="images/srcs-10-7.png"><br>
 
 14. After cutting is finished, click NEXT button.<br>
@@ -171,7 +171,7 @@
 17. After measuring, the value of roughness will be displayed in the device. Click NEXT button.<br>
 <img src="images/srcs-14.png"><br>
 
-18. Note the new cutting speed value and click NEXT button. Notice speed of cutting.
+18. Note the new cutting speed value and click NEXT button. Notice speed of cutting.<br>
 <img src="images/srcs-15.png"><br>
 
 19. Repeat the previous steps in further trials to get values of surface roughness for different values of cutting speed. Notice the relation.<br>
