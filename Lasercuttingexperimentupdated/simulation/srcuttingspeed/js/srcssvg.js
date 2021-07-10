@@ -10,7 +10,7 @@ var l1 = 30.175;
 var l2 = 30.175;
 var t = 5;
 var t_circ = 8;
-
+var cuttingspeedvalues = [[1000,1.01],[2000,1.46],[3000,1.92],[4000,2.38],[5000,2.83]];
 var framespeed = 40;
 var svg= document.getElementById('specimen2');
 var svgNS = "http://www.w3.org/2000/svg";
