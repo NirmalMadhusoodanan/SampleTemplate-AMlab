@@ -400,47 +400,47 @@ function ani1(){
 		}, 3000);
   }
 
-  function ani2(){
-	myStopFunction();
-	console.log('right is running and myint is',myInt);
-	document.getElementById('probe2').style.animation = "probe_right 3s linear 2 forwards alternate";
-	setTimeout(function(){
-		if ($("input[name='d']:checked").val()==1) {
-			document.getElementById('dispres').innerHTML =""+(laserpowervalues[repeat-1][1])+" &#181m";
-			document.getElementById('dispres').style.visibility="visible";
-			document.getElementById('sr1').style.visibility="hidden";
-			document.getElementById('sr2').innerHTML ="Surface Roughness of specimen = "+laserpowervalues[repeat-1][1]+" &#181m";
-			document.getElementById('sr2').style.visibility="visible";
-		}
-		if($("input[name='d']:checked").val()==0) {
-			document.getElementById('dispres').innerHTML =""+(laserpowervalues[repeat-1][2])+" &#181m";
-			document.getElementById('dispres').style.visibility="visible";
-			document.getElementById('sr1').style.visibility="hidden";
-			document.getElementById('sr2').innerHTML ="Surface Roughness of specimen = "+laserpowervalues[repeat-1][2]+" &#181m";
-			document.getElementById('sr2').style.visibility="visible";
-		}
-		if (repeat==1) {
-			setTimeout(function()
-				{
-					validateAnswer(0,0,"50px","130px");
-				},500);
-		}
-		else if (repeat==3) {
-			setTimeout(function()
-			{
-				validateAnswer(1,1,"50px","130px");
-			},500);
-		}
-		else if (repeat==4){
-			setTimeout(function()
-			{
-				validateAnswer(2,3,"50px","130px");
-			},500);
-		}
-		else {
-			document.getElementById('nextButton').style.visibility="visible";
-		}
-		}, 6000);	  }
+//   function ani2(){
+// 	myStopFunction();
+// 	console.log('right is running and myint is',myInt);
+// 	document.getElementById('probe2').style.animation = "probe_right 3s linear 2 forwards alternate";
+// 	setTimeout(function(){
+// 		if ($("input[name='d']:checked").val()==1) {
+// 			document.getElementById('dispres').innerHTML =""+(laserpowervalues[repeat-1][1])+" &#181m";
+// 			document.getElementById('dispres').style.visibility="visible";
+// 			document.getElementById('sr1').style.visibility="hidden";
+// 			document.getElementById('sr2').innerHTML ="Surface Roughness of specimen = "+laserpowervalues[repeat-1][1]+" &#181m";
+// 			document.getElementById('sr2').style.visibility="visible";
+// 		}
+// 		if($("input[name='d']:checked").val()==0) {
+// 			document.getElementById('dispres').innerHTML =""+(laserpowervalues[repeat-1][2])+" &#181m";
+// 			document.getElementById('dispres').style.visibility="visible";
+// 			document.getElementById('sr1').style.visibility="hidden";
+// 			document.getElementById('sr2').innerHTML ="Surface Roughness of specimen = "+laserpowervalues[repeat-1][2]+" &#181m";
+// 			document.getElementById('sr2').style.visibility="visible";
+// 		}
+// 		if (repeat==1) {
+// 			setTimeout(function()
+// 				{
+// 					validateAnswer(0,0,"50px","130px");
+// 				},500);
+// 		}
+// 		else if (repeat==3) {
+// 			setTimeout(function()
+// 			{
+// 				validateAnswer(1,1,"50px","130px");
+// 			},500);
+// 		}
+// 		else if (repeat==4){
+// 			setTimeout(function()
+// 			{
+// 				validateAnswer(2,3,"50px","130px");
+// 			},500);
+// 		}
+// 		else {
+// 			document.getElementById('nextButton').style.visibility="visible";
+// 		}
+// 		}, 6000);	  }
 
 function refresh1()
 {
