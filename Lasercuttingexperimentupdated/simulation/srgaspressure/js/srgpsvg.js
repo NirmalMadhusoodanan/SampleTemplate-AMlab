@@ -10,7 +10,6 @@ var l1 = 30.175;
 var l2 = 30.175;
 var t = 5;
 var t_circ = 8;
-var laserpowervalues = [[0.6,6.08],[0.9,4.37],[1.2,2.65],[1.5,0.94]];
 var cutspeed = 15;
 var framespeed = 40;
 var svg= document.getElementById('specimen2');
