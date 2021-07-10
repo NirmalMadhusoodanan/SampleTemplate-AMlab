@@ -36,6 +36,8 @@ function navNext()
   {
       document.getElementById('canvas'+temp).style.visibility="hidden";
   }
+  document.getElementById('step-2').setAttribute('class','step');
+  document.getElementById('specimen').setAttribute('class','svg');
 
  simsubscreennum+=1;
  document.getElementById('canvas'+(simsubscreennum)).style.visibility="visible";
