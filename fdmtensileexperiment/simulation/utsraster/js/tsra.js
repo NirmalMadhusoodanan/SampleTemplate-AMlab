@@ -36,6 +36,8 @@ function navNext()
   {
       document.getElementById('canvas'+temp).style.visibility="hidden";
   }
+  document.getElementById('step-2').setAttribute('class','step');
+  document.getElementById('specimen').setAttribute('class','svg');
 
  simsubscreennum+=1;
  document.getElementById('canvas'+(simsubscreennum)).style.visibility="visible";
@@ -386,7 +388,6 @@ function magic()
 			document.getElementById("form").style.visibility="hidden";
 			if($("input[name='d']:checked").val()==0){	document.getElementById('output').value = tensilevalues[repeat-1][2];		}
 			if($("input[name='d']:checked").val()==1){	document.getElementById('output').value = tensilevalues[repeat-1][1];;		}
-			document.getElementById("output").value =  tensilevalues[repeat-1][1];
 			document.getElementById("nextButton").style.visibility="visible";
 		}
 		if(repeat < 3 && repeat>0)
