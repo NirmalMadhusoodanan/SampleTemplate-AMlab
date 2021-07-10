@@ -9,7 +9,7 @@ var x1=1.5;
 var x2=2.75;
 var t = 6;
 var z,sw,v,n;
-var tensilevalues = [[0.5,30.42,25.22],[0.4,32,15,26.94],[0.3,33.86,28.66],[0.2,35.58,30.38],[0.1,37.3,32.09]]
+var tensilevalues = [[0.5,30.42,25.22],[0.4,32.15,26.94],[0.3,33.86,28.66],[0.2,35.58,30.38],[0.1,37.3,32.09]]
 
 var svg= document.getElementById('specimen');
 var svgNS = "http://www.w3.org/2000/svg";
