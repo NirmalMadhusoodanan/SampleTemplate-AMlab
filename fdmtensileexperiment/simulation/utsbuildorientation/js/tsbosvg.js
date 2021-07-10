@@ -10,7 +10,7 @@ var x2=2.75;
 var t = 6;
 var z,sw,v,m;
 var n4=7,n1 =5,n2=1,n3=1,s;
-var impactvalues = [[0,12.73,9.47],[30,17.52,14.26],[60,12.3,9.24],[90,11.7,8.5]]
+var tensilevalues = [["Flat",30.42,25.22],["On-edge",50.60,45.39],["Upright",12.37,7.16]]
 
 var svg= document.getElementById('specimen');
 var svg2=document.getElementById('specimen2');
