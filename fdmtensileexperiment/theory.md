@@ -48,9 +48,9 @@ Build orientation <br>
 
 ### Fixed Parameters:
 #### 1) Part Geometry
-<p style="text-indent:50px; text-align: justify">Geometry of part is fixed as 80*10*4 mm³ which is a ASTM standard specimen size.</p>
+<p style="text-indent:50px; text-align: justify">Geometry of part is fixed as ASTM standard specimen size.</p>
 <p align="center">
-  <img width="300" src="images/80by10by4geometry.PNG"></img><br><br>
+  <img width="300" src="images/fdmtensilepart.PNG"></img><br><br>
 Part Geometry <br>
 </p> 
 
